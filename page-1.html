@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liquid Glass Design System</title>
@@ -9,600 +11,551 @@
 
         :root {
             /* Light mode tokens */
-            --lgds-v7x-bg-primary: #f0f2f5;
-            --lgds-v7x-bg-secondary: #e8ecf1;
-            --lgds-v7x-bg-surface: rgba(255, 255, 255, 0.45);
-            --lgds-v7x-bg-surface-solid: rgba(255, 255, 255, 0.72);
-            --lgds-v7x-bg-surface-elevated: rgba(255, 255, 255, 0.65);
-            --lgds-v7x-bg-scrim: rgba(255, 255, 255, 0.35);
-            --lgds-v7x-bg-input: rgba(255, 255, 255, 0.6);
-            --lgds-v7x-bg-page: linear-gradient(135deg, #f5f7fa 0%, #e4e8ee 30%, #dfe3ea 60%, #f0f2f5 100%);
+            --lgds-v7x-bg-primary: #eef1f5;
+            --lgds-v7x-bg-secondary: #e4e8ee;
+            --lgds-v7x-bg-page: #f0f2f6;
+            --lgds-v7x-bg-blob-1: rgba(200, 210, 230, 0.5);
+            --lgds-v7x-bg-blob-2: rgba(220, 225, 240, 0.4);
+            --lgds-v7x-bg-blob-3: rgba(190, 200, 220, 0.3);
+
+            --lgds-v7x-glass-bg: rgba(255, 255, 255, 0.35);
+            --lgds-v7x-glass-bg-hover: rgba(255, 255, 255, 0.5);
+            --lgds-v7x-glass-border: rgba(255, 255, 255, 0.6);
+            --lgds-v7x-glass-border-inner: rgba(255, 255, 255, 0.4);
+            --lgds-v7x-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+            --lgds-v7x-glass-shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.05);
+            --lgds-v7x-glass-blur: 20px;
+            --lgds-v7x-glass-highlight: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.0) 100%);
+
+            --lgds-v7x-stabilized-bg: rgba(255, 255, 255, 0.7);
+            --lgds-v7x-stabilized-border: rgba(255, 255, 255, 0.8);
 
             --lgds-v7x-text-primary: #1a1a2e;
-            --lgds-v7x-text-secondary: #5a5f72;
-            --lgds-v7x-text-tertiary: #8e92a4;
-            --lgds-v7x-text-on-dark-btn: #ffffff;
-            --lgds-v7x-text-link: #3b6bcc;
-            --lgds-v7x-text-success: #2e7d32;
-            --lgds-v7x-text-warning: #c57600;
-            --lgds-v7x-text-error: #c62828;
+            --lgds-v7x-text-secondary: #5a5a7a;
+            --lgds-v7x-text-tertiary: #8a8aa0;
+            --lgds-v7x-text-inverse: #ffffff;
 
-            --lgds-v7x-border-edge: rgba(255, 255, 255, 0.7);
-            --lgds-v7x-border-inner: rgba(255, 255, 255, 0.5);
-            --lgds-v7x-border-highlight: rgba(255, 255, 255, 0.9);
-            --lgds-v7x-border-subtle: rgba(0, 0, 0, 0.06);
-            --lgds-v7x-border-input: rgba(0, 0, 0, 0.12);
+            --lgds-v7x-accent-blue: #3478f6;
+            --lgds-v7x-accent-green: #30d158;
+            --lgds-v7x-accent-red: #ff453a;
+            --lgds-v7x-accent-orange: #ff9f0a;
+            --lgds-v7x-accent-dark: #2c2c3a;
 
-            --lgds-v7x-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
-            --lgds-v7x-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
-            --lgds-v7x-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
-            --lgds-v7x-shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.06);
-            --lgds-v7x-shadow-inset-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.8);
-            --lgds-v7x-shadow-inset-subtle: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+            --lgds-v7x-input-bg: rgba(255, 255, 255, 0.5);
+            --lgds-v7x-input-border: rgba(0, 0, 0, 0.08);
+            --lgds-v7x-input-focus-border: rgba(52, 120, 246, 0.5);
 
-            --lgds-v7x-blur-glass: 24px;
-            --lgds-v7x-blur-glass-heavy: 40px;
-
-            --lgds-v7x-radius-xs: 6px;
-            --lgds-v7x-radius-sm: 10px;
-            --lgds-v7x-radius-md: 16px;
-            --lgds-v7x-radius-lg: 22px;
+            --lgds-v7x-divider: rgba(0, 0, 0, 0.06);
+            --lgds-v7x-radius-sm: 8px;
+            --lgds-v7x-radius-md: 14px;
+            --lgds-v7x-radius-lg: 20px;
             --lgds-v7x-radius-xl: 28px;
-            --lgds-v7x-radius-pill: 100px;
 
-            --lgds-v7x-font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
-            --lgds-v7x-font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
-
-            --lgds-v7x-btn-dark-bg: #2a2d35;
-            --lgds-v7x-btn-dark-hover: #3a3d45;
-            --lgds-v7x-btn-ghost-hover: rgba(0, 0, 0, 0.05);
-
-            --lgds-v7x-accent-blue: #4a8af4;
-            --lgds-v7x-accent-green: #4caf50;
-            --lgds-v7x-accent-amber: #f5a623;
-            --lgds-v7x-accent-red: #ef5350;
-
-            --lgds-v7x-status-active: #4caf50;
-            --lgds-v7x-status-pending: #f5a623;
-            --lgds-v7x-status-inactive: #9e9e9e;
-
-            --lgds-v7x-tab-active-bg: rgba(255, 255, 255, 0.85);
-            --lgds-v7x-tab-active-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            --lgds-v7x-font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
         }
 
         [data-lgds-v7x-theme="dark"] {
-            --lgds-v7x-bg-primary: #111318;
-            --lgds-v7x-bg-secondary: #1a1d24;
-            --lgds-v7x-bg-surface: rgba(255, 255, 255, 0.06);
-            --lgds-v7x-bg-surface-solid: rgba(255, 255, 255, 0.1);
-            --lgds-v7x-bg-surface-elevated: rgba(255, 255, 255, 0.09);
-            --lgds-v7x-bg-scrim: rgba(255, 255, 255, 0.04);
-            --lgds-v7x-bg-input: rgba(255, 255, 255, 0.08);
-            --lgds-v7x-bg-page: linear-gradient(135deg, #0d0f14 0%, #151820 30%, #111318 60%, #0d0f14 100%);
+            --lgds-v7x-bg-primary: #0a0a14;
+            --lgds-v7x-bg-secondary: #12121e;
+            --lgds-v7x-bg-page: #08080f;
+            --lgds-v7x-bg-blob-1: rgba(40, 50, 80, 0.4);
+            --lgds-v7x-bg-blob-2: rgba(30, 40, 70, 0.3);
+            --lgds-v7x-bg-blob-3: rgba(50, 60, 90, 0.25);
 
-            --lgds-v7x-text-primary: #eaedf3;
-            --lgds-v7x-text-secondary: #9ca3b4;
-            --lgds-v7x-text-tertiary: #636a7e;
-            --lgds-v7x-text-on-dark-btn: #ffffff;
-            --lgds-v7x-text-link: #6fa3f7;
-            --lgds-v7x-text-success: #66bb6a;
-            --lgds-v7x-text-warning: #ffa726;
-            --lgds-v7x-text-error: #ef5350;
+            --lgds-v7x-glass-bg: rgba(255, 255, 255, 0.06);
+            --lgds-v7x-glass-bg-hover: rgba(255, 255, 255, 0.1);
+            --lgds-v7x-glass-border: rgba(255, 255, 255, 0.12);
+            --lgds-v7x-glass-border-inner: rgba(255, 255, 255, 0.08);
+            --lgds-v7x-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
+            --lgds-v7x-glass-shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.3);
+            --lgds-v7x-glass-blur: 24px;
+            --lgds-v7x-glass-highlight: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.0) 100%);
 
-            --lgds-v7x-border-edge: rgba(255, 255, 255, 0.1);
-            --lgds-v7x-border-inner: rgba(255, 255, 255, 0.07);
-            --lgds-v7x-border-highlight: rgba(255, 255, 255, 0.15);
-            --lgds-v7x-border-subtle: rgba(255, 255, 255, 0.05);
-            --lgds-v7x-border-input: rgba(255, 255, 255, 0.12);
+            --lgds-v7x-stabilized-bg: rgba(255, 255, 255, 0.1);
+            --lgds-v7x-stabilized-border: rgba(255, 255, 255, 0.15);
 
-            --lgds-v7x-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
-            --lgds-v7x-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.2);
-            --lgds-v7x-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.2);
-            --lgds-v7x-shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.25);
-            --lgds-v7x-shadow-inset-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            --lgds-v7x-shadow-inset-subtle: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+            --lgds-v7x-text-primary: #f0f0f8;
+            --lgds-v7x-text-secondary: #a0a0b8;
+            --lgds-v7x-text-tertiary: #6a6a80;
+            --lgds-v7x-text-inverse: #1a1a2e;
 
-            --lgds-v7x-btn-dark-bg: rgba(255, 255, 255, 0.12);
-            --lgds-v7x-btn-dark-hover: rgba(255, 255, 255, 0.18);
-            --lgds-v7x-btn-ghost-hover: rgba(255, 255, 255, 0.06);
+            --lgds-v7x-accent-blue: #5a9cf6;
+            --lgds-v7x-accent-green: #30d158;
+            --lgds-v7x-accent-red: #ff6b6b;
+            --lgds-v7x-accent-orange: #ffb340;
+            --lgds-v7x-accent-dark: #e0e0f0;
 
-            --lgds-v7x-tab-active-bg: rgba(255, 255, 255, 0.12);
-            --lgds-v7x-tab-active-shadow: 0 1px 4px rgba(0,0,0,0.3);
+            --lgds-v7x-input-bg: rgba(255, 255, 255, 0.06);
+            --lgds-v7x-input-border: rgba(255, 255, 255, 0.1);
+            --lgds-v7x-input-focus-border: rgba(90, 156, 246, 0.5);
+
+            --lgds-v7x-divider: rgba(255, 255, 255, 0.06);
         }
 
-        /* ---- Reset & Base ---- */
-        *, *::before, *::after {
-            box-sizing: border-box;
+        /* Reset & Base */
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body.lgds-v7x-body {
-            font-family: var(--lgds-v7x-font-sans);
+            font-family: var(--lgds-v7x-font-family);
             background: var(--lgds-v7x-bg-page);
             color: var(--lgds-v7x-text-primary);
-            min-height: 100vh;
             line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background 0.4s ease, color 0.4s ease;
         }
 
-        /* ---- Noise Overlay for Glass Texture ---- */
-        .lgds-v7x-noise-overlay {
+        /* Background blobs */
+        .lgds-v7x-bg-canvas {
             position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            background-repeat: repeat;
-            background-size: 256px 256px;
-        }
-
-        [data-lgds-v7x-theme="dark"] .lgds-v7x-noise-overlay {
-            opacity: 0.05;
-        }
-
-        /* ---- Ambient Background Blobs ---- */
-        .lgds-v7x-ambient-bg {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
+            inset: 0;
             z-index: 0;
             overflow: hidden;
             pointer-events: none;
         }
 
-        .lgds-v7x-ambient-blob {
+        .lgds-v7x-bg-canvas::before,
+        .lgds-v7x-bg-canvas::after {
+            content: '';
             position: absolute;
             border-radius: 50%;
+            filter: blur(80px);
+            transition: background 0.5s ease;
+        }
+
+        .lgds-v7x-bg-canvas::before {
+            width: 600px;
+            height: 600px;
+            background: var(--lgds-v7x-bg-blob-1);
+            top: -10%;
+            right: -5%;
+        }
+
+        .lgds-v7x-bg-canvas::after {
+            width: 500px;
+            height: 500px;
+            background: var(--lgds-v7x-bg-blob-2);
+            bottom: -10%;
+            left: -5%;
+        }
+
+        .lgds-v7x-bg-blob-extra {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: var(--lgds-v7x-bg-blob-3);
+            border-radius: 50%;
             filter: blur(100px);
-            opacity: 0.15;
+            top: 40%;
+            left: 40%;
+            transition: background 0.5s ease;
         }
 
-        .lgds-v7x-ambient-blob--a {
-            width: 600px; height: 600px;
-            background: #c5d5f0;
-            top: -10%; left: -5%;
-        }
-
-        .lgds-v7x-ambient-blob--b {
-            width: 500px; height: 500px;
-            background: #d0dff5;
-            top: 30%; right: -10%;
-        }
-
-        .lgds-v7x-ambient-blob--c {
-            width: 450px; height: 450px;
-            background: #e0e8f4;
-            bottom: -5%; left: 30%;
-        }
-
-        [data-lgds-v7x-theme="dark"] .lgds-v7x-ambient-blob--a { background: #1a2a4a; opacity: 0.3; }
-        [data-lgds-v7x-theme="dark"] .lgds-v7x-ambient-blob--b { background: #1e2e4e; opacity: 0.25; }
-        [data-lgds-v7x-theme="dark"] .lgds-v7x-ambient-blob--c { background: #162040; opacity: 0.3; }
-
-        /* ---- Layout Shell ---- */
-        .lgds-v7x-shell {
+        /* Page container */
+        .lgds-v7x-page {
             position: relative;
             z-index: 1;
-            max-width: 1360px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 40px 32px 80px;
         }
 
-        /* ---- Theme Toggle ---- */
-        .lgds-v7x-theme-toggle {
+        /* Theme toggle */
+        .lgds-v7x-theme-toggle-bar {
             position: fixed;
             top: 24px;
             right: 24px;
             z-index: 1000;
             display: flex;
             align-items: center;
-            gap: 10px;
-            background: var(--lgds-v7x-bg-surface-solid);
-            backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            -webkit-backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-pill);
-            padding: 8px 18px;
-            cursor: pointer;
-            box-shadow: var(--lgds-v7x-shadow-md), var(--lgds-v7x-shadow-inset-highlight);
+            gap: 12px;
+        }
+
+        .lgds-v7x-theme-label {
             font-size: 13px;
             font-weight: 500;
-            color: var(--lgds-v7x-text-primary);
+            color: var(--lgds-v7x-text-secondary);
+        }
+
+        .lgds-v7x-toggle-switch {
+            position: relative;
+            width: 52px;
+            height: 28px;
+            background: var(--lgds-v7x-glass-bg);
+            backdrop-filter: blur(var(--lgds-v7x-glass-blur));
+            -webkit-backdrop-filter: blur(var(--lgds-v7x-glass-blur));
+            border: 1px solid var(--lgds-v7x-glass-border);
+            border-radius: 14px;
+            cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .lgds-v7x-theme-toggle:hover {
-            box-shadow: var(--lgds-v7x-shadow-lg), var(--lgds-v7x-shadow-inset-highlight);
-            transform: translateY(-1px);
+        .lgds-v7x-toggle-switch::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            background: var(--lgds-v7x-text-primary);
+            border-radius: 50%;
+            transition: transform 0.3s ease, background 0.3s ease;
         }
 
-        .lgds-v7x-theme-toggle__icon {
-            font-size: 16px;
-            line-height: 1;
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-toggle-switch::after {
+            transform: translateX(24px);
         }
 
-        /* ---- Page Header ---- */
-        .lgds-v7x-page-header {
+        /* Header */
+        .lgds-v7x-header {
             margin-bottom: 56px;
         }
 
-        .lgds-v7x-page-header__badge {
+        .lgds-v7x-header-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--lgds-v7x-bg-surface-solid);
-            backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            -webkit-backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-sm);
             padding: 8px 16px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
+            background: var(--lgds-v7x-glass-bg);
+            backdrop-filter: blur(var(--lgds-v7x-glass-blur));
+            -webkit-backdrop-filter: blur(var(--lgds-v7x-glass-blur));
+            border: 1px solid var(--lgds-v7x-glass-border);
+            border-radius: var(--lgds-v7x-radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
             color: var(--lgds-v7x-text-primary);
-            box-shadow: var(--lgds-v7x-shadow-sm), var(--lgds-v7x-shadow-inset-highlight);
             margin-bottom: 12px;
         }
 
-        .lgds-v7x-page-header__title {
-            font-size: 42px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 1.15;
-            margin-bottom: 8px;
-        }
-
-        .lgds-v7x-page-header__subtitle {
-            font-size: 16px;
-            color: var(--lgds-v7x-text-secondary);
+        .lgds-v7x-header-sub {
+            font-size: 15px;
+            color: var(--lgds-v7x-text-tertiary);
             font-weight: 400;
         }
 
-        /* ---- Section ---- */
+        /* Section wrapper */
         .lgds-v7x-section {
-            margin-bottom: 72px;
+            margin-bottom: 64px;
         }
 
-        .lgds-v7x-section__divider {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        .lgds-v7x-section__divider::before,
-        .lgds-v7x-section__divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--lgds-v7x-border-subtle);
-        }
-
-        .lgds-v7x-section__label {
+        .lgds-v7x-section-title {
             font-size: 13px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 1.5px;
             color: var(--lgds-v7x-text-tertiary);
-            background: var(--lgds-v7x-bg-surface-solid);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-xs);
-            padding: 6px 14px;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--lgds-v7x-divider);
         }
 
-        .lgds-v7x-section__desc {
-            text-align: center;
-            color: var(--lgds-v7x-text-secondary);
+        .lgds-v7x-section-desc {
             font-size: 14px;
-            margin-bottom: 28px;
+            color: var(--lgds-v7x-text-secondary);
+            margin-bottom: 24px;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        /* ---- Glass Panel (Outer Shell) ---- */
-        .lgds-v7x-glass-panel {
-            position: relative;
-            background: var(--lgds-v7x-bg-surface);
-            backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            -webkit-backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-lg);
-            box-shadow:
-                var(--lgds-v7x-shadow-lg),
-                var(--lgds-v7x-shadow-inset-highlight),
-                var(--lgds-v7x-shadow-inset-subtle);
-            overflow: hidden;
-        }
-
-        .lgds-v7x-glass-panel::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--lgds-v7x-border-highlight), transparent);
-            z-index: 1;
-        }
-
-        /* Inner plate / scrim — stabilized plate for readability */
-        .lgds-v7x-glass-panel__inner {
-            position: relative;
-            background: var(--lgds-v7x-bg-surface-solid);
-            border: 1px solid var(--lgds-v7x-border-inner);
-            border-radius: var(--lgds-v7x-radius-md);
-            margin: 12px;
-            box-shadow: var(--lgds-v7x-shadow-inset-highlight);
-        }
-
-        /* ---- Grid Layouts ---- */
-        .lgds-v7x-grid-2col {
+        /* Grid layouts */
+        .lgds-v7x-grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 24px;
         }
 
-        .lgds-v7x-grid-3col {
+        .lgds-v7x-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 24px;
         }
 
-        .lgds-v7x-grid-4col {
+        .lgds-v7x-grid-4 {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 20px;
         }
 
-        @media (max-width: 1024px) {
-            .lgds-v7x-grid-3col { grid-template-columns: 1fr 1fr; }
-            .lgds-v7x-grid-4col { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 640px) {
-            .lgds-v7x-grid-2col,
-            .lgds-v7x-grid-3col,
-            .lgds-v7x-grid-4col { grid-template-columns: 1fr; }
-            .lgds-v7x-shell { padding: 24px 16px 60px; }
-            .lgds-v7x-page-header__title { font-size: 28px; }
+        @media (max-width: 900px) {
+            .lgds-v7x-grid-2,
+            .lgds-v7x-grid-3,
+            .lgds-v7x-grid-4 {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ============================================
-           COMPONENT SHOWCASE CARDS
+           GLASS CARD — The core component
            ============================================ */
 
-        .lgds-v7x-showcase-card {
+        /* Outer shell */
+        .lgds-v7x-glass-card {
             position: relative;
-            border: 1px solid var(--lgds-v7x-border-subtle);
+            background: var(--lgds-v7x-glass-bg);
+            backdrop-filter: blur(var(--lgds-v7x-glass-blur));
+            -webkit-backdrop-filter: blur(var(--lgds-v7x-glass-blur));
+            border: 1px solid var(--lgds-v7x-glass-border);
             border-radius: var(--lgds-v7x-radius-lg);
+            box-shadow: var(--lgds-v7x-glass-shadow);
             padding: 24px;
-            background: var(--lgds-v7x-bg-scrim);
-            min-height: 220px;
-            display: flex;
-            flex-direction: column;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
 
-        .lgds-v7x-showcase-card__tag {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            font-size: 11px;
-            font-weight: 500;
-            color: var(--lgds-v7x-text-tertiary);
-            background: var(--lgds-v7x-bg-surface-solid);
-            border: 1px solid var(--lgds-v7x-border-subtle);
-            border-radius: var(--lgds-v7x-radius-xs);
-            padding: 2px 8px;
-        }
-
-        .lgds-v7x-showcase-card__label {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--lgds-v7x-text-secondary);
-            margin-bottom: 16px;
-        }
-
-        .lgds-v7x-showcase-card__body {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* ============================================
-           COMPONENT: Glass Card
-           ============================================ */
-
-        .lgds-v7x-card {
-            position: relative;
-            background: var(--lgds-v7x-bg-surface);
-            backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            -webkit-backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-lg);
-            padding: 24px;
-            box-shadow:
-                var(--lgds-v7x-shadow-md),
-                var(--lgds-v7x-shadow-inset-highlight),
-                var(--lgds-v7x-shadow-inset-subtle);
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
-
-        .lgds-v7x-card::before {
+        /* Highlight band (top light reflection) */
+        .lgds-v7x-glass-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--lgds-v7x-border-highlight), transparent);
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: var(--lgds-v7x-glass-highlight);
+            border-radius: var(--lgds-v7x-radius-lg) var(--lgds-v7x-radius-lg) 0 0;
+            pointer-events: none;
         }
 
-        .lgds-v7x-card:hover {
-            box-shadow:
-                var(--lgds-v7x-shadow-lg),
-                var(--lgds-v7x-shadow-inset-highlight),
-                var(--lgds-v7x-shadow-inset-subtle);
-            transform: translateY(-2px);
+        /* Inner stroke */
+        .lgds-v7x-glass-card::after {
+            content: '';
+            position: absolute;
+            inset: 1px;
+            border: 1px solid var(--lgds-v7x-glass-border-inner);
+            border-radius: calc(var(--lgds-v7x-radius-lg) - 1px);
+            pointer-events: none;
         }
 
-        .lgds-v7x-card__header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
+        .lgds-v7x-glass-card:hover {
+            background: var(--lgds-v7x-glass-bg-hover);
+            box-shadow: var(--lgds-v7x-glass-shadow-elevated);
+            transform: translateY(-1px);
         }
 
-        .lgds-v7x-card__icon {
-            width: 32px;
-            height: 32px;
-            background: var(--lgds-v7x-bg-surface-solid);
-            border: 1px solid var(--lgds-v7x-border-inner);
-            border-radius: var(--lgds-v7x-radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            color: var(--lgds-v7x-text-secondary);
+        /* Elevated variant */
+        .lgds-v7x-glass-card--elevated {
+            box-shadow: var(--lgds-v7x-glass-shadow-elevated);
         }
 
-        .lgds-v7x-card__title {
-            font-size: 15px;
+        /* Compact variant */
+        .lgds-v7x-glass-card--compact {
+            padding: 16px;
+            border-radius: var(--lgds-v7x-radius-md);
+        }
+
+        .lgds-v7x-glass-card--compact::before {
+            border-radius: var(--lgds-v7x-radius-md) var(--lgds-v7x-radius-md) 0 0;
+        }
+
+        .lgds-v7x-glass-card--compact::after {
+            border-radius: calc(var(--lgds-v7x-radius-md) - 1px);
+        }
+
+        /* Stabilized plate (for content readability) */
+        .lgds-v7x-stabilized-plate {
+            background: var(--lgds-v7x-stabilized-bg);
+            border: 1px solid var(--lgds-v7x-stabilized-border);
+            border-radius: var(--lgds-v7x-radius-md);
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+
+        .lgds-v7x-type-display {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--lgds-v7x-text-primary);
+            line-height: 1.1;
+        }
+
+        .lgds-v7x-type-h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: var(--lgds-v7x-text-primary);
+            line-height: 1.2;
+        }
+
+        .lgds-v7x-type-h2 {
+            font-size: 24px;
             font-weight: 600;
             color: var(--lgds-v7x-text-primary);
+            line-height: 1.3;
         }
 
-        .lgds-v7x-card__subtitle {
+        .lgds-v7x-type-h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--lgds-v7x-text-primary);
+            line-height: 1.4;
+        }
+
+        .lgds-v7x-type-body {
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--lgds-v7x-text-secondary);
+            line-height: 1.6;
+        }
+
+        .lgds-v7x-type-caption {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--lgds-v7x-text-tertiary);
+            line-height: 1.4;
+        }
+
+        .lgds-v7x-type-mono {
+            font-family: 'SF Mono', 'Fira Code', monospace;
             font-size: 13px;
             color: var(--lgds-v7x-text-secondary);
         }
 
-        .lgds-v7x-card__price {
+        .lgds-v7x-type-price {
             font-size: 28px;
             font-weight: 700;
             color: var(--lgds-v7x-text-primary);
-            margin: 8px 0 16px;
-        }
-
-        .lgds-v7x-card__actions {
-            display: flex;
-            gap: 8px;
-            align-items: center;
+            letter-spacing: -0.5px;
         }
 
         /* ============================================
-           COMPONENT: Buttons
+           BUTTONS
            ============================================ */
 
         .lgds-v7x-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
-            font-family: var(--lgds-v7x-font-sans);
-            font-size: 13px;
+            gap: 8px;
+            padding: 10px 20px;
+            font-family: var(--lgds-v7x-font-family);
+            font-size: 14px;
             font-weight: 600;
-            line-height: 1;
-            padding: 10px 18px;
             border-radius: var(--lgds-v7x-radius-sm);
-            border: none;
             cursor: pointer;
             transition: all 0.2s ease;
-            white-space: nowrap;
+            border: none;
+            outline: none;
+            position: relative;
+            z-index: 1;
         }
 
-        .lgds-v7x-btn--primary {
-            background: var(--lgds-v7x-btn-dark-bg);
-            color: var(--lgds-v7x-text-on-dark-btn);
-            box-shadow: var(--lgds-v7x-shadow-sm);
+        /* Glass button (primary style matching the images) */
+        .lgds-v7x-btn--glass {
+            background: var(--lgds-v7x-glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--lgds-v7x-glass-border);
+            color: var(--lgds-v7x-text-primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        .lgds-v7x-btn--primary:hover {
-            background: var(--lgds-v7x-btn-dark-hover);
-            box-shadow: var(--lgds-v7x-shadow-md);
+        .lgds-v7x-btn--glass:hover {
+            background: var(--lgds-v7x-glass-bg-hover);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        /* Filled dark button */
+        .lgds-v7x-btn--filled-dark {
+            background: var(--lgds-v7x-accent-dark);
+            color: var(--lgds-v7x-text-inverse);
+            border: 1px solid transparent;
+        }
+
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-btn--filled-dark {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--lgds-v7x-text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .lgds-v7x-btn--filled-dark:hover {
+            opacity: 0.9;
             transform: translateY(-1px);
         }
 
-        .lgds-v7x-btn--secondary {
-            background: var(--lgds-v7x-bg-surface-solid);
-            color: var(--lgds-v7x-text-primary);
-            border: 1px solid var(--lgds-v7x-border-input);
-            box-shadow: var(--lgds-v7x-shadow-sm), var(--lgds-v7x-shadow-inset-highlight);
-        }
-
-        .lgds-v7x-btn--secondary:hover {
-            background: var(--lgds-v7x-bg-surface-elevated);
-            box-shadow: var(--lgds-v7x-shadow-md), var(--lgds-v7x-shadow-inset-highlight);
-        }
-
-        .lgds-v7x-btn--ghost {
-            background: transparent;
-            color: var(--lgds-v7x-text-secondary);
-            border: none;
-        }
-
-        .lgds-v7x-btn--ghost:hover {
-            background: var(--lgds-v7x-btn-ghost-hover);
-            color: var(--lgds-v7x-text-primary);
-        }
-
+        /* Accent blue button */
         .lgds-v7x-btn--accent {
             background: var(--lgds-v7x-accent-blue);
-            color: #fff;
-            box-shadow: var(--lgds-v7x-shadow-sm);
+            color: #ffffff;
+            border: 1px solid transparent;
         }
 
         .lgds-v7x-btn--accent:hover {
             filter: brightness(1.1);
-            box-shadow: var(--lgds-v7x-shadow-md);
             transform: translateY(-1px);
         }
 
-        .lgds-v7x-btn--sm {
-            padding: 7px 12px;
-            font-size: 12px;
-            border-radius: var(--lgds-v7x-radius-xs);
+        /* Ghost button */
+        .lgds-v7x-btn--ghost {
+            background: transparent;
+            color: var(--lgds-v7x-text-secondary);
+            border: 1px solid transparent;
         }
 
+        .lgds-v7x-btn--ghost:hover {
+            background: var(--lgds-v7x-glass-bg);
+            color: var(--lgds-v7x-text-primary);
+        }
+
+        /* Small button */
+        .lgds-v7x-btn--sm {
+            padding: 6px 14px;
+            font-size: 12px;
+            border-radius: 6px;
+        }
+
+        /* Large button */
         .lgds-v7x-btn--lg {
             padding: 14px 28px;
-            font-size: 15px;
+            font-size: 16px;
             border-radius: var(--lgds-v7x-radius-md);
         }
 
-        .lgds-v7x-btn--pill {
-            border-radius: var(--lgds-v7x-radius-pill);
+        /* Full-width button */
+        .lgds-v7x-btn--full {
+            width: 100%;
         }
 
         /* ============================================
-           COMPONENT: Inputs
+           INPUTS
            ============================================ */
 
         .lgds-v7x-input-group {
             display: flex;
             flex-direction: column;
             gap: 6px;
+            position: relative;
+            z-index: 1;
         }
 
-        .lgds-v7x-input-group__label {
+        .lgds-v7x-input-label {
             font-size: 13px;
             font-weight: 600;
             color: var(--lgds-v7x-text-primary);
         }
 
         .lgds-v7x-input {
-            font-family: var(--lgds-v7x-font-sans);
+            padding: 10px 14px;
+            font-family: var(--lgds-v7x-font-family);
             font-size: 14px;
             color: var(--lgds-v7x-text-primary);
-            background: var(--lgds-v7x-bg-input);
-            border: 1px solid var(--lgds-v7x-border-input);
+            background: var(--lgds-v7x-input-bg);
+            border: 1px solid var(--lgds-v7x-input-border);
             border-radius: var(--lgds-v7x-radius-sm);
-            padding: 10px 14px;
             outline: none;
             transition: all 0.2s ease;
-            box-shadow: var(--lgds-v7x-shadow-inset-highlight);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
 
         .lgds-v7x-input::placeholder {
@@ -610,69 +563,345 @@
         }
 
         .lgds-v7x-input:focus {
-            border-color: var(--lgds-v7x-accent-blue);
-            box-shadow: 0 0 0 3px rgba(74, 138, 244, 0.15), var(--lgds-v7x-shadow-inset-highlight);
+            border-color: var(--lgds-v7x-input-focus-border);
+            box-shadow: 0 0 0 3px rgba(52, 120, 246, 0.15);
         }
 
-        .lgds-v7x-input-group__helper {
+        .lgds-v7x-input-helper {
             font-size: 12px;
             color: var(--lgds-v7x-text-tertiary);
         }
 
-        .lgds-v7x-input--search {
-            padding-left: 36px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238e92a4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: 12px center;
+        /* Input with button row */
+        .lgds-v7x-input-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .lgds-v7x-input-row .lgds-v7x-input {
+            flex: 1;
         }
 
         /* ============================================
-           COMPONENT: Tabs
+           NAVIGATION BAR
            ============================================ */
 
-        .lgds-v7x-tabs {
-            display: inline-flex;
+        .lgds-v7x-navbar {
+            display: flex;
             align-items: center;
-            gap: 2px;
-            background: var(--lgds-v7x-bg-surface);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--lgds-v7x-border-subtle);
-            border-radius: var(--lgds-v7x-radius-sm);
-            padding: 3px;
+            gap: 8px;
+            padding: 8px 12px;
+            background: var(--lgds-v7x-glass-bg);
+            backdrop-filter: blur(var(--lgds-v7x-glass-blur));
+            -webkit-backdrop-filter: blur(var(--lgds-v7x-glass-blur));
+            border: 1px solid var(--lgds-v7x-glass-border);
+            border-radius: 40px;
+            box-shadow: var(--lgds-v7x-glass-shadow);
+            position: relative;
+            z-index: 1;
         }
 
-        .lgds-v7x-tabs__item {
-            font-family: var(--lgds-v7x-font-sans);
+        .lgds-v7x-navbar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: var(--lgds-v7x-glass-highlight);
+            border-radius: 40px 40px 0 0;
+            pointer-events: none;
+        }
+
+        .lgds-v7x-navbar-logo {
+            width: 32px;
+            height: 32px;
+            background: var(--lgds-v7x-accent-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-navbar-logo {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lgds-v7x-navbar-logo svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--lgds-v7x-text-inverse);
+        }
+
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-navbar-logo svg {
+            fill: var(--lgds-v7x-text-primary);
+        }
+
+        .lgds-v7x-navbar-link {
+            padding: 6px 16px;
             font-size: 13px;
             font-weight: 500;
             color: var(--lgds-v7x-text-secondary);
-            background: transparent;
-            border: none;
-            border-radius: var(--lgds-v7x-radius-xs);
-            padding: 7px 14px;
-            cursor: pointer;
+            text-decoration: none;
+            border-radius: 20px;
             transition: all 0.2s ease;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
         }
 
-        .lgds-v7x-tabs__item:hover {
+        .lgds-v7x-navbar-link:hover {
             color: var(--lgds-v7x-text-primary);
-            background: var(--lgds-v7x-btn-ghost-hover);
+            background: var(--lgds-v7x-glass-bg-hover);
         }
 
-        .lgds-v7x-tabs__item--active {
+        .lgds-v7x-navbar-link--active {
             color: var(--lgds-v7x-text-primary);
-            background: var(--lgds-v7x-tab-active-bg);
-            box-shadow: var(--lgds-v7x-tab-active-shadow);
             font-weight: 600;
+            background: var(--lgds-v7x-stabilized-bg);
+        }
+
+        .lgds-v7x-navbar-avatar {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            margin-left: auto;
+            flex-shrink: 0;
         }
 
         /* ============================================
-           COMPONENT: Table
+           MODAL / DIALOG
            ============================================ */
 
-        .lgds-v7x-table-wrap {
+        .lgds-v7x-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .lgds-v7x-modal-overlay--visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .lgds-v7x-modal {
+            width: 100%;
+            max-width: 380px;
+            position: relative;
+        }
+
+        .lgds-v7x-modal-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--lgds-v7x-glass-bg);
+            border: 1px solid var(--lgds-v7x-glass-border);
+            border-radius: var(--lgds-v7x-radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .lgds-v7x-modal-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--lgds-v7x-text-secondary);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .lgds-v7x-modal-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--lgds-v7x-text-primary);
+            margin-bottom: 8px;
+        }
+
+        .lgds-v7x-modal-desc {
+            font-size: 13px;
+            color: var(--lgds-v7x-text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .lgds-v7x-modal-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .lgds-v7x-modal-actions .lgds-v7x-btn {
+            flex: 1;
+        }
+
+        /* ============================================
+           TOAST / NOTIFICATION
+           ============================================ */
+
+        .lgds-v7x-toast {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .lgds-v7x-toast-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .lgds-v7x-toast-icon--success {
+            background: rgba(48, 209, 88, 0.15);
+        }
+
+        .lgds-v7x-toast-icon--success svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--lgds-v7x-accent-green);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .lgds-v7x-toast-icon--error {
+            background: rgba(255, 69, 58, 0.15);
+        }
+
+        .lgds-v7x-toast-icon--error svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--lgds-v7x-accent-red);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .lgds-v7x-toast-icon--warning {
+            background: rgba(255, 159, 10, 0.15);
+        }
+
+        .lgds-v7x-toast-icon--warning svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--lgds-v7x-accent-orange);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .lgds-v7x-toast-content {
+            flex: 1;
+        }
+
+        .lgds-v7x-toast-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--lgds-v7x-text-primary);
+        }
+
+        .lgds-v7x-toast-msg {
+            font-size: 12px;
+            color: var(--lgds-v7x-text-secondary);
+        }
+
+        .lgds-v7x-toast-close {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: opacity 0.2s;
+            background: none;
+            border: none;
+            color: var(--lgds-v7x-text-primary);
+            font-size: 16px;
+        }
+
+        .lgds-v7x-toast-close:hover {
+            opacity: 1;
+        }
+
+        /* ============================================
+           TOOLTIP
+           ============================================ */
+
+        .lgds-v7x-tooltip-wrap {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .lgds-v7x-tooltip-trigger {
+            width: 36px;
+            height: 36px;
+            background: var(--lgds-v7x-glass-bg);
+            border: 1px solid var(--lgds-v7x-glass-border);
+            border-radius: var(--lgds-v7x-radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .lgds-v7x-tooltip-trigger svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--lgds-v7x-text-secondary);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .lgds-v7x-tooltip-bubble {
+            background: var(--lgds-v7x-stabilized-bg);
+            border: 1px solid var(--lgds-v7x-stabilized-border);
+            border-radius: var(--lgds-v7x-radius-sm);
+            padding: 12px 16px;
+            max-width: 220px;
+        }
+
+        .lgds-v7x-tooltip-bubble-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--lgds-v7x-text-primary);
+            margin-bottom: 4px;
+        }
+
+        .lgds-v7x-tooltip-bubble-text {
+            font-size: 12px;
+            color: var(--lgds-v7x-text-secondary);
+            line-height: 1.5;
+        }
+
+        /* ============================================
+           TABLE
+           ============================================ */
+
+        .lgds-v7x-table-container {
             overflow-x: auto;
+            position: relative;
+            z-index: 1;
         }
 
         .lgds-v7x-table {
@@ -682,361 +911,189 @@
         }
 
         .lgds-v7x-table th {
+            padding: 12px 16px;
             text-align: left;
-            font-size: 12px;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--lgds-v7x-text-tertiary);
-            padding: 10px 16px;
-            border-bottom: 1px solid var(--lgds-v7x-border-subtle);
+            font-size: 13px;
+            color: var(--lgds-v7x-text-secondary);
+            border-bottom: 1px solid var(--lgds-v7x-divider);
         }
 
         .lgds-v7x-table td {
             padding: 12px 16px;
             color: var(--lgds-v7x-text-primary);
-            border-bottom: 1px solid var(--lgds-v7x-border-subtle);
+            border-bottom: 1px solid var(--lgds-v7x-divider);
         }
 
-        .lgds-v7x-table tr:last-child td {
+        .lgds-v7x-table tbody tr:hover {
+            background: var(--lgds-v7x-glass-bg);
+        }
+
+        .lgds-v7x-table tbody tr:last-child td {
             border-bottom: none;
         }
 
-        .lgds-v7x-table tr:hover td {
-            background: var(--lgds-v7x-btn-ghost-hover);
+        /* Tab bar inside table/card header */
+        .lgds-v7x-tab-bar {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            position: relative;
+            z-index: 1;
         }
 
-        .lgds-v7x-table__status {
+        .lgds-v7x-tab-item {
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--lgds-v7x-text-secondary);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: none;
+            border: none;
+            font-family: var(--lgds-v7x-font-family);
+        }
+
+        .lgds-v7x-tab-item:hover {
+            color: var(--lgds-v7x-text-primary);
+            background: var(--lgds-v7x-glass-bg);
+        }
+
+        .lgds-v7x-tab-item--active {
+            background: var(--lgds-v7x-stabilized-bg);
+            border: 1px solid var(--lgds-v7x-stabilized-border);
+            color: var(--lgds-v7x-text-primary);
+            font-weight: 600;
+        }
+
+        /* Search input */
+        .lgds-v7x-search-input {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: var(--lgds-v7x-input-bg);
+            border: 1px solid var(--lgds-v7x-input-border);
+            border-radius: var(--lgds-v7x-radius-sm);
+            min-width: 180px;
+        }
+
+        .lgds-v7x-search-input svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--lgds-v7x-text-tertiary);
+            fill: none;
+            stroke-width: 2;
+            flex-shrink: 0;
+        }
+
+        .lgds-v7x-search-input input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 13px;
+            color: var(--lgds-v7x-text-primary);
+            font-family: var(--lgds-v7x-font-family);
+            width: 100%;
+        }
+
+        .lgds-v7x-search-input input::placeholder {
+            color: var(--lgds-v7x-text-tertiary);
+        }
+
+        /* Status badge */
+        .lgds-v7x-status-badge {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 13px;
-            font-weight: 500;
-        }
-
-        .lgds-v7x-table__status-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-        }
-
-        .lgds-v7x-table__status-dot--active { background: var(--lgds-v7x-status-active); }
-        .lgds-v7x-table__status-dot--pending { background: var(--lgds-v7x-status-pending); }
-        .lgds-v7x-table__status-dot--inactive { background: var(--lgds-v7x-status-inactive); }
-
-        .lgds-v7x-table__value {
-            font-variant-numeric: tabular-nums;
-            font-weight: 500;
-        }
-
-        /* ============================================
-           COMPONENT: Modal
-           ============================================ */
-
-        .lgds-v7x-modal-demo {
-            max-width: 280px;
-            margin: 0 auto;
-        }
-
-        .lgds-v7x-modal {
-            background: var(--lgds-v7x-bg-surface-solid);
-            backdrop-filter: blur(var(--lgds-v7x-blur-glass-heavy));
-            -webkit-backdrop-filter: blur(var(--lgds-v7x-blur-glass-heavy));
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-lg);
-            padding: 28px 24px 20px;
-            box-shadow:
-                var(--lgds-v7x-shadow-xl),
-                var(--lgds-v7x-shadow-inset-highlight),
-                var(--lgds-v7x-shadow-inset-subtle);
-            text-align: center;
-            position: relative;
-        }
-
-        .lgds-v7x-modal::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--lgds-v7x-border-highlight), transparent);
-        }
-
-        .lgds-v7x-modal__icon {
-            width: 40px;
-            height: 40px;
-            background: var(--lgds-v7x-bg-surface);
-            border: 1px solid var(--lgds-v7x-border-inner);
-            border-radius: var(--lgds-v7x-radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 14px;
-            font-size: 18px;
-            color: var(--lgds-v7x-text-secondary);
-        }
-
-        .lgds-v7x-modal__title {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .lgds-v7x-modal__desc {
-            font-size: 13px;
-            color: var(--lgds-v7x-text-secondary);
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .lgds-v7x-modal__actions {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-        }
-
-        /* ============================================
-           COMPONENT: Toast
-           ============================================ */
-
-        .lgds-v7x-toast {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            background: var(--lgds-v7x-bg-surface-solid);
-            backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            -webkit-backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-md);
-            padding: 14px 16px;
-            box-shadow:
-                var(--lgds-v7x-shadow-lg),
-                var(--lgds-v7x-shadow-inset-highlight);
-            max-width: 320px;
-            position: relative;
-        }
-
-        .lgds-v7x-toast::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--lgds-v7x-border-highlight), transparent);
-        }
-
-        .lgds-v7x-toast__icon {
-            font-size: 18px;
-            line-height: 1;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        .lgds-v7x-toast__icon--success { color: var(--lgds-v7x-text-success); }
-        .lgds-v7x-toast__icon--error { color: var(--lgds-v7x-text-error); }
-        .lgds-v7x-toast__icon--warning { color: var(--lgds-v7x-text-warning); }
-
-        .lgds-v7x-toast__content { flex: 1; }
-
-        .lgds-v7x-toast__title {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--lgds-v7x-text-primary);
-            margin-bottom: 2px;
-        }
-
-        .lgds-v7x-toast__message {
-            font-size: 13px;
-            color: var(--lgds-v7x-text-secondary);
-        }
-
-        .lgds-v7x-toast__close {
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--lgds-v7x-text-tertiary);
-            font-size: 16px;
-            padding: 0;
-            line-height: 1;
-            flex-shrink: 0;
-        }
-
-        .lgds-v7x-toast__close:hover {
-            color: var(--lgds-v7x-text-primary);
-        }
-
-        /* ============================================
-           COMPONENT: Tooltip
-           ============================================ */
-
-        .lgds-v7x-tooltip-demo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .lgds-v7x-tooltip-trigger {
-            width: 36px;
-            height: 36px;
-            background: var(--lgds-v7x-bg-surface);
-            border: 1px solid var(--lgds-v7x-border-inner);
-            border-radius: var(--lgds-v7x-radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: var(--lgds-v7x-text-secondary);
-        }
-
-        .lgds-v7x-tooltip {
-            background: var(--lgds-v7x-bg-surface-solid);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-sm);
-            padding: 10px 14px;
-            box-shadow: var(--lgds-v7x-shadow-md), var(--lgds-v7x-shadow-inset-highlight);
-            max-width: 200px;
-        }
-
-        .lgds-v7x-tooltip__title {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--lgds-v7x-text-primary);
-            margin-bottom: 4px;
-        }
-
-        .lgds-v7x-tooltip__text {
+            padding: 3px 10px;
+            border-radius: 20px;
             font-size: 12px;
-            color: var(--lgds-v7x-text-secondary);
-            line-height: 1.5;
-        }
-
-        /* ============================================
-           COMPONENT: Nav Bar
-           ============================================ */
-
-        .lgds-v7x-navbar {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            background: var(--lgds-v7x-bg-surface-solid);
-            backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            -webkit-backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-pill);
-            padding: 6px 8px;
-            box-shadow: var(--lgds-v7x-shadow-md), var(--lgds-v7x-shadow-inset-highlight);
-        }
-
-        .lgds-v7x-navbar__logo {
-            width: 32px;
-            height: 32px;
-            background: var(--lgds-v7x-btn-dark-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-            margin-right: 8px;
-            flex-shrink: 0;
-        }
-
-        .lgds-v7x-navbar__links {
-            display: flex;
-            gap: 2px;
-            flex: 1;
-        }
-
-        .lgds-v7x-navbar__link {
-            font-size: 13px;
             font-weight: 500;
-            color: var(--lgds-v7x-text-secondary);
-            padding: 7px 14px;
-            border-radius: var(--lgds-v7x-radius-pill);
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
         }
 
-        .lgds-v7x-navbar__link:hover {
-            color: var(--lgds-v7x-text-primary);
-            background: var(--lgds-v7x-btn-ghost-hover);
+        .lgds-v7x-status-badge--active {
+            background: rgba(48, 209, 88, 0.12);
+            color: var(--lgds-v7x-accent-green);
         }
 
-        .lgds-v7x-navbar__link--active {
-            color: var(--lgds-v7x-text-primary);
-            font-weight: 600;
+        .lgds-v7x-status-badge--pending {
+            background: rgba(255, 159, 10, 0.12);
+            color: var(--lgds-v7x-accent-orange);
         }
 
-        .lgds-v7x-navbar__avatar {
-            width: 30px;
-            height: 30px;
-            background: var(--lgds-v7x-bg-surface);
-            border: 1px solid var(--lgds-v7x-border-inner);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
+        .lgds-v7x-status-badge--inactive {
+            background: rgba(0, 0, 0, 0.06);
             color: var(--lgds-v7x-text-tertiary);
-            margin-left: 8px;
-            flex-shrink: 0;
+        }
+
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-status-badge--inactive {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .lgds-v7x-status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .lgds-v7x-status-dot--green {
+            background: var(--lgds-v7x-accent-green);
+        }
+
+        .lgds-v7x-status-dot--orange {
+            background: var(--lgds-v7x-accent-orange);
+        }
+
+        .lgds-v7x-status-dot--gray {
+            background: var(--lgds-v7x-text-tertiary);
         }
 
         /* ============================================
-           COMPONENT: Dropdown Menu
+           DROPDOWN MENU
            ============================================ */
 
         .lgds-v7x-dropdown {
-            background: var(--lgds-v7x-bg-surface-solid);
-            backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            -webkit-backdrop-filter: blur(var(--lgds-v7x-blur-glass));
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-md);
+            background: var(--lgds-v7x-stabilized-bg);
+            border: 1px solid var(--lgds-v7x-stabilized-border);
+            border-radius: var(--lgds-v7x-radius-sm);
             padding: 6px;
-            box-shadow: var(--lgds-v7x-shadow-lg), var(--lgds-v7x-shadow-inset-highlight);
             min-width: 160px;
+            box-shadow: var(--lgds-v7x-glass-shadow);
+            position: relative;
+            z-index: 1;
         }
 
-        .lgds-v7x-dropdown::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--lgds-v7x-border-highlight), transparent);
-        }
-
-        .lgds-v7x-dropdown__item {
+        .lgds-v7x-dropdown-item {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 9px 12px;
+            padding: 8px 12px;
             font-size: 13px;
+            font-weight: 500;
             color: var(--lgds-v7x-text-primary);
-            border-radius: var(--lgds-v7x-radius-xs);
+            border-radius: 6px;
             cursor: pointer;
             transition: background 0.15s ease;
         }
 
-        .lgds-v7x-dropdown__item:hover {
-            background: var(--lgds-v7x-btn-ghost-hover);
+        .lgds-v7x-dropdown-item:hover {
+            background: var(--lgds-v7x-glass-bg);
         }
 
-        .lgds-v7x-dropdown__item-icon {
-            color: var(--lgds-v7x-text-tertiary);
-            font-size: 14px;
-            width: 18px;
-            text-align: center;
-        }
-
-        .lgds-v7x-dropdown__divider {
-            height: 1px;
-            background: var(--lgds-v7x-border-subtle);
-            margin: 4px 0;
+        .lgds-v7x-dropdown-item svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--lgds-v7x-text-secondary);
+            fill: none;
+            stroke-width: 1.5;
+            flex-shrink: 0;
         }
 
         /* ============================================
-           COMPONENT: Badge / Chip
+           HELPER / CHIP / TAG
            ============================================ */
 
         .lgds-v7x-chip {
@@ -1046,569 +1103,1613 @@
             padding: 5px 12px;
             font-size: 12px;
             font-weight: 500;
-            border-radius: var(--lgds-v7x-radius-pill);
-            background: var(--lgds-v7x-bg-surface-solid);
-            border: 1px solid var(--lgds-v7x-border-subtle);
-            color: var(--lgds-v7x-text-secondary);
-            box-shadow: var(--lgds-v7x-shadow-sm);
-        }
-
-        .lgds-v7x-chip--active {
-            color: var(--lgds-v7x-text-success);
-            border-color: rgba(76, 175, 80, 0.2);
-        }
-
-        .lgds-v7x-chip--pending {
-            color: var(--lgds-v7x-text-warning);
-            border-color: rgba(245, 166, 35, 0.2);
-        }
-
-        .lgds-v7x-chip--inactive {
-            color: var(--lgds-v7x-text-tertiary);
-        }
-
-        /* ============================================
-           COMPONENT: Progress / Meter
-           ============================================ */
-
-        .lgds-v7x-progress {
-            width: 100%;
-            height: 6px;
-            background: var(--lgds-v7x-bg-surface);
-            border-radius: var(--lgds-v7x-radius-pill);
-            overflow: hidden;
-            border: 1px solid var(--lgds-v7x-border-subtle);
-        }
-
-        .lgds-v7x-progress__bar {
-            height: 100%;
-            border-radius: var(--lgds-v7x-radius-pill);
-            background: var(--lgds-v7x-accent-blue);
-            transition: width 0.5s ease;
-        }
-
-        /* ============================================
-           COMPONENT: Toggle / Switch
-           ============================================ */
-
-        .lgds-v7x-toggle {
-            position: relative;
-            width: 44px;
-            height: 24px;
-            background: var(--lgds-v7x-bg-surface);
-            border: 1px solid var(--lgds-v7x-border-input);
-            border-radius: var(--lgds-v7x-radius-pill);
-            cursor: pointer;
-            transition: all 0.25s ease;
-            flex-shrink: 0;
-        }
-
-        .lgds-v7x-toggle::after {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 18px;
-            height: 18px;
-            background: white;
-            border-radius: 50%;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.15);
-            transition: transform 0.25s ease;
-        }
-
-        .lgds-v7x-toggle--on {
-            background: var(--lgds-v7x-accent-blue);
-            border-color: var(--lgds-v7x-accent-blue);
-        }
-
-        .lgds-v7x-toggle--on::after {
-            transform: translateX(20px);
-        }
-
-        /* ============================================
-           COMPONENT: Data Dense List
-           ============================================ */
-
-        .lgds-v7x-list-dense {
-            list-style: none;
-        }
-
-        .lgds-v7x-list-dense__item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 14px;
-            font-size: 13px;
-            border-bottom: 1px solid var(--lgds-v7x-border-subtle);
-            transition: background 0.15s ease;
-        }
-
-        .lgds-v7x-list-dense__item:last-child {
-            border-bottom: none;
-        }
-
-        .lgds-v7x-list-dense__item:hover {
-            background: var(--lgds-v7x-btn-ghost-hover);
-        }
-
-        .lgds-v7x-list-dense__icon {
-            width: 18px;
-            text-align: center;
-            color: var(--lgds-v7x-text-tertiary);
-            flex-shrink: 0;
-        }
-
-        .lgds-v7x-list-dense__label {
-            flex: 1;
-            font-weight: 500;
             color: var(--lgds-v7x-text-primary);
+            background: var(--lgds-v7x-glass-bg);
+            border: 1px solid var(--lgds-v7x-glass-border);
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
 
-        .lgds-v7x-list-dense__meta {
-            color: var(--lgds-v7x-text-tertiary);
-            font-variant-numeric: tabular-nums;
-        }
-
-        .lgds-v7x-list-dense__chevron {
-            color: var(--lgds-v7x-text-tertiary);
-            font-size: 12px;
-        }
-
-        /* ============================================
-           COMPONENT: Stat Card
-           ============================================ */
-
-        .lgds-v7x-stat {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .lgds-v7x-stat__value {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--lgds-v7x-text-primary);
-            letter-spacing: -0.02em;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .lgds-v7x-stat__label {
-            font-size: 12px;
-            color: var(--lgds-v7x-text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 500;
-            margin-top: 4px;
-        }
-
-        /* ============================================
-           COMPONENT: Avatar Group
-           ============================================ */
-
-        .lgds-v7x-avatar-group {
+        .lgds-v7x-chip-row {
             display: flex;
-            align-items: center;
-        }
-
-        .lgds-v7x-avatar-group__item {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--lgds-v7x-bg-surface-elevated);
-            border: 2px solid var(--lgds-v7x-bg-surface-solid);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            font-weight: 600;
-            color: var(--lgds-v7x-text-secondary);
-            margin-left: -8px;
-            position: relative;
-        }
-
-        .lgds-v7x-avatar-group__item:first-child {
-            margin-left: 0;
-        }
-
-        .lgds-v7x-avatar-group__overflow {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--lgds-v7x-bg-surface);
-            border: 2px solid var(--lgds-v7x-bg-surface-solid);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            font-weight: 600;
-            color: var(--lgds-v7x-text-tertiary);
-            margin-left: -8px;
-        }
-
-        /* ============================================
-           COMPONENT: Anatomy Diagram
-           ============================================ */
-
-        .lgds-v7x-anatomy {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 48px 0;
-        }
-
-        .lgds-v7x-anatomy__visual {
-            position: relative;
-            width: 320px;
-            height: 320px;
-        }
-
-        .lgds-v7x-anatomy__outer-shell {
-            position: absolute;
-            inset: 0;
-            background: var(--lgds-v7x-bg-surface);
-            backdrop-filter: blur(var(--lgds-v7x-blur-glass-heavy));
-            -webkit-backdrop-filter: blur(var(--lgds-v7x-blur-glass-heavy));
-            border: 1px solid var(--lgds-v7x-border-edge);
-            border-radius: var(--lgds-v7x-radius-xl);
-            box-shadow: var(--lgds-v7x-shadow-xl);
-        }
-
-        .lgds-v7x-anatomy__outer-shell::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--lgds-v7x-border-highlight), transparent);
-            border-radius: var(--lgds-v7x-radius-xl) var(--lgds-v7x-radius-xl) 0 0;
-        }
-
-        .lgds-v7x-anatomy__inner-plate {
-            position: absolute;
-            top: 14px; left: 14px; right: 14px; bottom: 14px;
-            background: var(--lgds-v7x-bg-surface-solid);
-            border: 1px solid var(--lgds-v7x-border-inner);
-            border-radius: var(--lgds-v7x-radius-lg);
-            box-shadow: var(--lgds-v7x-shadow-inset-highlight);
-        }
-
-        .lgds-v7x-anatomy__content-area {
-            position: absolute;
-            top: 28px; left: 28px; right: 28px; bottom: 28px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            flex-wrap: wrap;
             gap: 8px;
         }
 
-        .lgds-v7x-anatomy__content-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--lgds-v7x-bg-surface);
-            border: 1px solid var(--lgds-v7x-border-inner);
-            border-radius: var(--lgds-v7x-radius-sm);
-            display: flex;
+        /* ============================================
+           HELPER TEXT / TOOLTIP INDICATOR
+           ============================================ */
+
+        .lgds-v7x-helper-pill {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            color: var(--lgds-v7x-text-secondary);
-            font-size: 16px;
+            gap: 6px;
+            padding: 5px 12px;
+            background: var(--lgds-v7x-accent-dark);
+            color: var(--lgds-v7x-text-inverse);
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 6px;
+            position: relative;
         }
 
-        .lgds-v7x-anatomy__content-title {
-            font-size: 16px;
-            font-weight: 700;
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-helper-pill {
+            background: rgba(255, 255, 255, 0.15);
             color: var(--lgds-v7x-text-primary);
         }
 
-        .lgds-v7x-anatomy__content-status {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 13px;
-            color: var(--lgds-v7x-text-secondary);
+        .lgds-v7x-helper-pill::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid var(--lgds-v7x-accent-dark);
         }
 
-        .lgds-v7x-anatomy__content-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--lgds-v7x-status-active);
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-helper-pill::before {
+            border-bottom-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .lgds-v7x-helper-pill svg {
+            width: 12px;
+            height: 12px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
         }
 
         /* ============================================
-           TOKEN SWATCH DISPLAY
+           DIVIDER
+           ============================================ */
+
+        .lgds-v7x-divider {
+            height: 1px;
+            background: var(--lgds-v7x-divider);
+            margin: 16px 0;
+        }
+
+        /* ============================================
+           COLOR SWATCH GRID
            ============================================ */
 
         .lgds-v7x-swatch-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             gap: 12px;
         }
 
         .lgds-v7x-swatch {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .lgds-v7x-swatch__color {
-            height: 48px;
             border-radius: var(--lgds-v7x-radius-sm);
-            border: 1px solid var(--lgds-v7x-border-subtle);
+            overflow: hidden;
+            border: 1px solid var(--lgds-v7x-divider);
         }
 
-        .lgds-v7x-swatch__name {
+        .lgds-v7x-swatch-color {
+            height: 56px;
+        }
+
+        .lgds-v7x-swatch-info {
+            padding: 8px 10px;
+            background: var(--lgds-v7x-stabilized-bg);
+        }
+
+        .lgds-v7x-swatch-name {
             font-size: 11px;
             font-weight: 600;
             color: var(--lgds-v7x-text-primary);
-            font-family: var(--lgds-v7x-font-mono);
         }
 
-        .lgds-v7x-swatch__value {
+        .lgds-v7x-swatch-val {
             font-size: 10px;
             color: var(--lgds-v7x-text-tertiary);
-            font-family: var(--lgds-v7x-font-mono);
+            font-family: 'SF Mono', monospace;
         }
 
         /* ============================================
-           TYPOGRAPHY SAMPLES
-           ============================================ */
-
-        .lgds-v7x-type-sample {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--lgds-v7x-border-subtle);
-        }
-
-        .lgds-v7x-type-sample:last-child {
-            border-bottom: none;
-        }
-
-        .lgds-v7x-type-sample__meta {
-            font-size: 11px;
-            font-family: var(--lgds-v7x-font-mono);
-            color: var(--lgds-v7x-text-tertiary);
-        }
-
-        /* ============================================
-           DENSITY STRESS TEST
-           ============================================ */
-
-        .lgds-v7x-stress-panel {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 16px;
-            padding: 16px;
-        }
-
-        @media (max-width: 768px) {
-            .lgds-v7x-stress-panel {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .lgds-v7x-stress-panel__toolbar {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 0 16px 16px;
-        }
-
-        .lgds-v7x-stress-panel__sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        /* ============================================
-           SPACING & RADIUS DISPLAY
+           SPACING VISUALIZER
            ============================================ */
 
         .lgds-v7x-spacing-row {
             display: flex;
             align-items: center;
-            gap: 16px;
-            padding: 8px 0;
+            gap: 12px;
+            margin-bottom: 8px;
         }
 
-        .lgds-v7x-spacing-row__block {
-            background: var(--lgds-v7x-accent-blue);
-            opacity: 0.3;
-            border-radius: 2px;
-            height: 24px;
-        }
-
-        .lgds-v7x-spacing-row__label {
+        .lgds-v7x-spacing-label {
             font-size: 12px;
-            font-family: var(--lgds-v7x-font-mono);
+            font-weight: 600;
             color: var(--lgds-v7x-text-secondary);
-            min-width: 90px;
+            width: 40px;
+            text-align: right;
+            flex-shrink: 0;
         }
 
-        .lgds-v7x-radius-row {
+        .lgds-v7x-spacing-bar {
+            height: 20px;
+            background: var(--lgds-v7x-accent-blue);
+            border-radius: 4px;
+            opacity: 0.3;
+        }
+
+        .lgds-v7x-spacing-val {
+            font-size: 11px;
+            color: var(--lgds-v7x-text-tertiary);
+            font-family: 'SF Mono', monospace;
+        }
+
+        /* ============================================
+           RADIUS DEMO
+           ============================================ */
+
+        .lgds-v7x-radius-demo {
+            display: flex;
+            gap: 16px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .lgds-v7x-radius-item {
+            text-align: center;
+        }
+
+        .lgds-v7x-radius-box {
+            width: 64px;
+            height: 64px;
+            background: var(--lgds-v7x-glass-bg);
+            border: 1px solid var(--lgds-v7x-glass-border);
+            margin-bottom: 8px;
+        }
+
+        .lgds-v7x-radius-name {
+            font-size: 11px;
+            color: var(--lgds-v7x-text-secondary);
+            font-weight: 500;
+        }
+
+        .lgds-v7x-radius-value {
+            font-size: 10px;
+            color: var(--lgds-v7x-text-tertiary);
+            font-family: 'SF Mono', monospace;
+        }
+
+        /* ============================================
+           DEMO SHOWCASE AREA
+           ============================================ */
+
+        .lgds-v7x-showcase-area {
+            background: var(--lgds-v7x-bg-secondary);
+            border: 1px solid var(--lgds-v7x-divider);
+            border-radius: var(--lgds-v7x-radius-lg);
+            padding: 40px;
             display: flex;
             align-items: center;
-            gap: 16px;
-            padding: 8px 0;
+            justify-content: center;
+            min-height: 300px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .lgds-v7x-radius-row__block {
-            width: 48px;
-            height: 48px;
-            background: var(--lgds-v7x-bg-surface-elevated);
-            border: 1px solid var(--lgds-v7x-border-input);
+        .lgds-v7x-showcase-area--dark {
+            background: #0c0c18;
         }
 
-        .lgds-v7x-radius-row__label {
+        .lgds-v7x-showcase-area-label {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--lgds-v7x-text-tertiary);
+            background: var(--lgds-v7x-glass-bg);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--lgds-v7x-divider);
+        }
+
+        /* Blob inside showcase */
+        .lgds-v7x-showcase-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            pointer-events: none;
+        }
+
+        /* ============================================
+           PRODUCT CARD (Glass Card demo)
+           ============================================ */
+
+        .lgds-v7x-product-card-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--lgds-v7x-glass-bg);
+            border: 1px solid var(--lgds-v7x-glass-border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .lgds-v7x-product-card-icon svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--lgds-v7x-text-secondary);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .lgds-v7x-product-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .lgds-v7x-product-card-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--lgds-v7x-text-primary);
+        }
+
+        /* ============================================
+           ACCOUNT BALANCE DEMO
+           ============================================ */
+
+        .lgds-v7x-balance-label {
             font-size: 12px;
-            font-family: var(--lgds-v7x-font-mono);
+            font-weight: 500;
+            color: var(--lgds-v7x-text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .lgds-v7x-balance-amount {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--lgds-v7x-text-primary);
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================
+           DATA LIST (Settings-like)
+           ============================================ */
+
+        .lgds-v7x-data-list {
+            position: relative;
+            z-index: 1;
+        }
+
+        .lgds-v7x-data-list-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .lgds-v7x-data-list-header svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--lgds-v7x-text-secondary);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .lgds-v7x-data-list-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--lgds-v7x-text-primary);
+        }
+
+        .lgds-v7x-data-row {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--lgds-v7x-divider);
+        }
+
+        .lgds-v7x-data-row:last-child {
+            border-bottom: none;
+        }
+
+        .lgds-v7x-data-row-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .lgds-v7x-data-row-icon svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--lgds-v7x-text-secondary);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .lgds-v7x-data-row-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--lgds-v7x-text-primary);
+            flex: 1;
+        }
+
+        .lgds-v7x-data-row-val {
+            font-size: 13px;
+            color: var(--lgds-v7x-text-secondary);
+            margin-right: 8px;
+        }
+
+        .lgds-v7x-data-row-secondary {
+            font-size: 12px;
+            color: var(--lgds-v7x-text-tertiary);
+            margin-right: 8px;
+        }
+
+        .lgds-v7x-data-row-chevron {
+            width: 16px;
+            height: 16px;
+            stroke: var(--lgds-v7x-text-tertiary);
+            fill: none;
+            stroke-width: 2;
+            flex-shrink: 0;
+        }
+
+        /* ============================================
+           LAYER DIAGRAM (Anatomy view)
+           ============================================ */
+
+        .lgds-v7x-anatomy-stack {
+            position: relative;
+            width: 320px;
+            height: 400px;
+            perspective: 800px;
+        }
+
+        .lgds-v7x-anatomy-layer {
+            position: absolute;
+            border-radius: var(--lgds-v7x-radius-lg);
+            transition: transform 0.5s ease;
+        }
+
+        .lgds-v7x-anatomy-layer--outer {
+            width: 300px;
+            height: 380px;
+            background: var(--lgds-v7x-glass-bg);
+            border: 1px solid var(--lgds-v7x-glass-border);
+            backdrop-filter: blur(var(--lgds-v7x-glass-blur));
+            -webkit-backdrop-filter: blur(var(--lgds-v7x-glass-blur));
+            box-shadow: var(--lgds-v7x-glass-shadow);
+            top: 10px;
+            left: 10px;
+        }
+
+        .lgds-v7x-anatomy-layer--inner {
+            width: 270px;
+            height: 340px;
+            background: var(--lgds-v7x-stabilized-bg);
+            border: 1px solid var(--lgds-v7x-stabilized-border);
+            top: 30px;
+            left: 25px;
+        }
+
+        .lgds-v7x-anatomy-layer--shadow {
+            width: 310px;
+            height: 390px;
+            background: rgba(0, 0, 0, 0.03);
+            top: 8px;
+            left: 5px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-anatomy-layer--shadow {
+            background: rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ============================================
+           UTILITY / FLEX helpers
+           ============================================ */
+
+        .lgds-v7x-flex {
+            display: flex;
+        }
+
+        .lgds-v7x-flex--col {
+            flex-direction: column;
+        }
+
+        .lgds-v7x-flex--center {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lgds-v7x-flex--between {
+            justify-content: space-between;
+        }
+
+        .lgds-v7x-flex--wrap {
+            flex-wrap: wrap;
+        }
+
+        .lgds-v7x-gap-4 { gap: 4px; }
+        .lgds-v7x-gap-8 { gap: 8px; }
+        .lgds-v7x-gap-12 { gap: 12px; }
+        .lgds-v7x-gap-16 { gap: 16px; }
+        .lgds-v7x-gap-24 { gap: 24px; }
+
+        .lgds-v7x-mt-8 { margin-top: 8px; }
+        .lgds-v7x-mt-16 { margin-top: 16px; }
+        .lgds-v7x-mt-24 { margin-top: 24px; }
+        .lgds-v7x-mb-8 { margin-bottom: 8px; }
+        .lgds-v7x-mb-16 { margin-bottom: 16px; }
+        .lgds-v7x-mb-24 { margin-bottom: 24px; }
+
+        .lgds-v7x-relative { position: relative; }
+        .lgds-v7x-z1 { position: relative; z-index: 1; }
+
+        /* ============================================
+           DEMO GRID (Stress test backgrounds)
+           ============================================ */
+
+        .lgds-v7x-stress-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 800px) {
+            .lgds-v7x-stress-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .lgds-v7x-stress-cell {
+            position: relative;
+            border-radius: var(--lgds-v7x-radius-lg);
+            overflow: hidden;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--lgds-v7x-divider);
+        }
+
+        .lgds-v7x-stress-cell-label {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--lgds-v7x-text-tertiary);
+            background: var(--lgds-v7x-stabilized-bg);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--lgds-v7x-divider);
+            z-index: 2;
+        }
+
+        .lgds-v7x-stress-bg-calm {
+            background: var(--lgds-v7x-bg-secondary);
+        }
+
+        .lgds-v7x-stress-bg-texture {
+            background: var(--lgds-v7x-bg-secondary);
+            background-image:
+                linear-gradient(135deg, rgba(255,255,255,0.3) 25%, transparent 25%),
+                linear-gradient(225deg, rgba(255,255,255,0.3) 25%, transparent 25%);
+        }
+
+        .lgds-v7x-stress-bg-hotspot {
+            background: var(--lgds-v7x-bg-secondary);
+        }
+
+        .lgds-v7x-stress-bg-hotspot::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255,220,150,0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 30%;
+            left: 20%;
+        }
+
+        .lgds-v7x-stress-bg-shape {
+            background: var(--lgds-v7x-bg-secondary);
+            overflow: hidden;
+        }
+
+        .lgds-v7x-stress-bg-shape::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #ffffff;
+            border-radius: 50%;
+            top: -30%;
+            left: -10%;
+        }
+
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-stress-bg-shape::before {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .lgds-v7x-stress-bg-shape::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 60%;
+            background: #1a1a2e;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-stress-bg-shape::after {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .lgds-v7x-stress-bg-complex {
+            background: var(--lgds-v7x-bg-secondary);
+        }
+
+        .lgds-v7x-stress-bg-complex::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: rgba(200, 210, 230, 0.5);
+            border-radius: 50%;
+            bottom: -20%;
+            left: -10%;
+            filter: blur(30px);
+        }
+
+        [data-lgds-v7x-theme="dark"] .lgds-v7x-stress-bg-complex::before {
+            background: rgba(60, 70, 100, 0.4);
+        }
+
+        .lgds-v7x-stress-bg-dark {
+            background: #0c0c18;
+        }
+
+        .lgds-v7x-stress-bg-dark .lgds-v7x-stress-cell-label {
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ============================================
+           ANIMATION / TRANSITIONS
+           ============================================ */
+
+        @keyframes lgds-v7x-fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .lgds-v7x-animate-in {
+            animation: lgds-v7x-fadeInUp 0.5s ease forwards;
+        }
+
+        .lgds-v7x-animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .lgds-v7x-animate-delay-2 { animation-delay: 0.2s; opacity: 0; }
+        .lgds-v7x-animate-delay-3 { animation-delay: 0.3s; opacity: 0; }
+        .lgds-v7x-animate-delay-4 { animation-delay: 0.4s; opacity: 0; }
+        .lgds-v7x-animate-delay-5 { animation-delay: 0.5s; opacity: 0; }
+
+        /* Scrollbar styling */
+        .lgds-v7x-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .lgds-v7x-body::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .lgds-v7x-body::-webkit-scrollbar-thumb {
+            background: var(--lgds-v7x-glass-border);
+            border-radius: 4px;
+        }
+
+        /* ============================================
+           ICONS (inline SVG helper classes)
+           ============================================ */
+
+        .lgds-v7x-icon-16 {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .lgds-v7x-icon-20 {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        /* Form full-width demo */
+        .lgds-v7x-form-demo {
+            width: 100%;
+            max-width: 320px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================
+           LONG COPY CARD
+           ============================================ */
+
+        .lgds-v7x-longcopy-card {
+            max-width: 280px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .lgds-v7x-longcopy-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--lgds-v7x-text-primary);
+            margin-bottom: 12px;
+        }
+
+        .lgds-v7x-longcopy-body {
+            font-size: 13px;
+            color: var(--lgds-v7x-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .lgds-v7x-longcopy-warning {
+            font-size: 12px;
+            color: var(--lgds-v7x-text-primary);
+            font-weight: 600;
+            padding-top: 12px;
+            border-top: 1px solid var(--lgds-v7x-divider);
+        }
+
+        .lgds-v7x-longcopy-warning span {
+            font-weight: 400;
             color: var(--lgds-v7x-text-secondary);
         }
 
         /* ============================================
-           SHADOW DISPLAY
+           INLINE CODE DISPLAY
+           ============================================ */
+        .lgds-v7x-code-block {
+            background: var(--lgds-v7x-stabilized-bg);
+            border: 1px solid var(--lgds-v7x-divider);
+            border-radius: var(--lgds-v7x-radius-sm);
+            padding: 16px;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 12px;
+            color: var(--lgds-v7x-text-secondary);
+            overflow-x: auto;
+            line-height: 1.7;
+            white-space: pre;
+        }
+
+        .lgds-v7x-code-key {
+            color: var(--lgds-v7x-accent-blue);
+        }
+
+        .lgds-v7x-code-val {
+            color: var(--lgds-v7x-text-primary);
+        }
+
+        /* ============================================
+           RESPONSIVE
            ============================================ */
 
-        .lgds-v7x-shadow-sample {
-            width: 100%;
-            height: 80px;
-            background: var(--lgds-v7x-bg-surface-solid);
-            border-radius: var(--lgds-v7x-radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-family: var(--lgds-v7x-font-mono);
-            color: var(--lgds-v7x-text-secondary);
-        }
+        @media (max-width: 600px) {
+            .lgds-v7x-page {
+                padding: 24px 16px 60px;
+            }
 
-        /* Utility classes */
-        .lgds-v7x-mt-0 { margin-top: 0; }
-        .lgds-v7x-mb-8 { margin-bottom: 8px; }
-        .lgds-v7x-mb-12 { margin-bottom: 12px; }
-        .lgds-v7x-mb-16 { margin-bottom: 16px; }
-        .lgds-v7x-mb-24 { margin-bottom: 24px; }
-        .lgds-v7x-gap-8 { gap: 8px; }
-        .lgds-v7x-gap-12 { gap: 12px; }
-        .lgds-v7x-flex { display: flex; }
-        .lgds-v7x-flex-wrap { flex-wrap: wrap; }
-        .lgds-v7x-items-center { align-items: center; }
-        .lgds-v7x-justify-between { justify-content: space-between; }
-        .lgds-v7x-flex-1 { flex: 1; }
-        .lgds-v7x-text-center { text-align: center; }
-        .lgds-v7x-p-16 { padding: 16px; }
-        .lgds-v7x-p-20 { padding: 20px; }
-        .lgds-v7x-p-24 { padding: 24px; }
+            .lgds-v7x-type-display {
+                font-size: 32px;
+            }
 
-        /* ---- Full-width components ---- */
-        .lgds-v7x-full-card-demo {
-            width: 100%;
-        }
+            .lgds-v7x-balance-amount {
+                font-size: 28px;
+            }
 
-        /* Annotation callout */
-        .lgds-v7x-annotation {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            color: var(--lgds-v7x-text-tertiary);
-            padding: 4px 10px;
-            background: var(--lgds-v7x-bg-surface);
-            border: 1px solid var(--lgds-v7x-border-subtle);
-            border-radius: var(--lgds-v7x-radius-pill);
-        }
-
-        .lgds-v7x-annotation__dot {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: var(--lgds-v7x-accent-blue);
-        }
-
-        /* Code block display */
-        .lgds-v7x-code-block {
-            background: var(--lgds-v7x-bg-surface);
-            border: 1px solid var(--lgds-v7x-border-subtle);
-            border-radius: var(--lgds-v7x-radius-sm);
-            padding: 14px 16px;
-            font-family: var(--lgds-v7x-font-mono);
-            font-size: 12px;
-            color: var(--lgds-v7x-text-secondary);
-            line-height: 1.7;
-            overflow-x: auto;
-        }
-
-        /* Scrollbar styling */
-        .lgds-v7x-code-block::-webkit-scrollbar {
-            height: 4px;
-        }
-        .lgds-v7x-code-block::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .lgds-v7x-code-block::-webkit-scrollbar-thumb {
-            background: var(--lgds-v7x-border-input);
-            border-radius: 2px;
-        }
-
-        /* Chip row at bottom */
-        .lgds-v7x-chip-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 16px;
-            flex-wrap: wrap;
+            .lgds-v7x-stress-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
-<body class="lgds-v7x-body"><div class="lgds-v7x-shell"><header class="lgds-v7x-page-header">
-            <div class="lgds-v7x-page-header__badge">💧 Liquid Glass UI Playbook</div>
-            <h1 class="lgds-v7x-page-header__title">Design System</h1>
-            <p class="lgds-v7x-page-header__subtitle">tiers · states · stress tests — edge + highlight · stabilized plate · readable states</p>
-        </header><main></main></div><script>
-        (function() {
-            const toggle = document.getElementById('lgds-v7x-theme-toggle');
-            const icon = document.getElementById('lgds-v7x-theme-icon');
-            const label = document.getElementById('lgds-v7x-theme-label');
-            let isDark = false;
+<body class="lgds-v7x-body" data-lgds-v7x-theme="light">
 
-            // Check system preference
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                isDark = true;
-                applyTheme();
+    <!-- Background -->
+    <div class="lgds-v7x-bg-canvas">
+        <div class="lgds-v7x-bg-blob-extra"></div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="lgds-v7x-theme-toggle-bar">
+        <span class="lgds-v7x-theme-label">Light</span>
+        <div class="lgds-v7x-toggle-switch" id="lgds-v7x-theme-toggle" role="button" tabindex="0" aria-label="Toggle dark mode"></div>
+        <span class="lgds-v7x-theme-label">Dark</span>
+    </div>
+
+    <!-- Page -->
+    <div class="lgds-v7x-page">
+
+        <!-- ============================================
+             HEADER
+             ============================================ -->
+        <header class="lgds-v7x-header lgds-v7x-animate-in lgds-v7x-animate-delay-1">
+            <div class="lgds-v7x-header-badge">
+                <svg class="lgds-v7x-icon-16" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                LIQUID GLASS UI PLAYBOOK
+            </div>
+            <p class="lgds-v7x-header-sub">tiers · states · stress tests</p>
+        </header>
+
+        <!-- ============================================
+             SECTION: TOKENS & FOUNDATIONS
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-2">
+            <h2 class="lgds-v7x-section-title">Design Tokens</h2>
+            <p class="lgds-v7x-section-desc">Core color, spacing, and radius tokens that power every liquid glass component. Toggle dark mode to see adaptive values.</p>
+
+            <!-- Colors -->
+            <h3 class="lgds-v7x-type-h3 lgds-v7x-mb-16">Colors</h3>
+            <div class="lgds-v7x-swatch-grid lgds-v7x-mb-24">
+                <div class="lgds-v7x-swatch">
+                    <div class="lgds-v7x-swatch-color" style="background: var(--lgds-v7x-bg-primary)"></div>
+                    <div class="lgds-v7x-swatch-info">
+                        <div class="lgds-v7x-swatch-name">BG Primary</div>
+                        <div class="lgds-v7x-swatch-val">--bg-primary</div>
+                    </div>
+                </div>
+                <div class="lgds-v7x-swatch">
+                    <div class="lgds-v7x-swatch-color" style="background: var(--lgds-v7x-bg-secondary)"></div>
+                    <div class="lgds-v7x-swatch-info">
+                        <div class="lgds-v7x-swatch-name">BG Secondary</div>
+                        <div class="lgds-v7x-swatch-val">--bg-secondary</div>
+                    </div>
+                </div>
+                <div class="lgds-v7x-swatch">
+                    <div class="lgds-v7x-swatch-color" style="background: var(--lgds-v7x-glass-bg); backdrop-filter: blur(10px);"></div>
+                    <div class="lgds-v7x-swatch-info">
+                        <div class="lgds-v7x-swatch-name">Glass BG</div>
+                        <div class="lgds-v7x-swatch-val">--glass-bg</div>
+                    </div>
+                </div>
+                <div class="lgds-v7x-swatch">
+                    <div class="lgds-v7x-swatch-color" style="background: var(--lgds-v7x-stabilized-bg)"></div>
+                    <div class="lgds-v7x-swatch-info">
+                        <div class="lgds-v7x-swatch-name">Stabilized</div>
+                        <div class="lgds-v7x-swatch-val">--stabilized-bg</div>
+                    </div>
+                </div>
+                <div class="lgds-v7x-swatch">
+                    <div class="lgds-v7x-swatch-color" style="background: var(--lgds-v7x-accent-blue)"></div>
+                    <div class="lgds-v7x-swatch-info">
+                        <div class="lgds-v7x-swatch-name">Accent Blue</div>
+                        <div class="lgds-v7x-swatch-val">--accent-blue</div>
+                    </div>
+                </div>
+                <div class="lgds-v7x-swatch">
+                    <div class="lgds-v7x-swatch-color" style="background: var(--lgds-v7x-accent-green)"></div>
+                    <div class="lgds-v7x-swatch-info">
+                        <div class="lgds-v7x-swatch-name">Accent Green</div>
+                        <div class="lgds-v7x-swatch-val">--accent-green</div>
+                    </div>
+                </div>
+                <div class="lgds-v7x-swatch">
+                    <div class="lgds-v7x-swatch-color" style="background: var(--lgds-v7x-accent-red)"></div>
+                    <div class="lgds-v7x-swatch-info">
+                        <div class="lgds-v7x-swatch-name">Accent Red</div>
+                        <div class="lgds-v7x-swatch-val">--accent-red</div>
+                    </div>
+                </div>
+                <div class="lgds-v7x-swatch">
+                    <div class="lgds-v7x-swatch-color" style="background: var(--lgds-v7x-accent-dark)"></div>
+                    <div class="lgds-v7x-swatch-info">
+                        <div class="lgds-v7x-swatch-name">Accent Dark</div>
+                        <div class="lgds-v7x-swatch-val">--accent-dark</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Colors -->
+            <h3 class="lgds-v7x-type-h3 lgds-v7x-mb-16">Text Hierarchy</h3>
+            <div class="lgds-v7x-glass-card lgds-v7x-glass-card--compact lgds-v7x-mb-24" style="max-width: 500px;">
+                <p style="font-size: 16px; font-weight: 600; color: var(--lgds-v7x-text-primary); margin-bottom: 8px; position: relative; z-index: 1;">Primary Text — Main headings and labels</p>
+                <p style="font-size: 14px; color: var(--lgds-v7x-text-secondary); margin-bottom: 8px; position: relative; z-index: 1;">Secondary Text — Body copy and descriptions</p>
+                <p style="font-size: 12px; color: var(--lgds-v7x-text-tertiary); position: relative; z-index: 1;">Tertiary Text — Captions, helpers, and metadata</p>
+            </div>
+
+            <!-- Border Radius -->
+            <h3 class="lgds-v7x-type-h3 lgds-v7x-mb-16">Border Radius</h3>
+            <div class="lgds-v7x-radius-demo lgds-v7x-mb-24">
+                <div class="lgds-v7x-radius-item">
+                    <div class="lgds-v7x-radius-box" style="border-radius: var(--lgds-v7x-radius-sm);"></div>
+                    <div class="lgds-v7x-radius-name">SM</div>
+                    <div class="lgds-v7x-radius-value">8px</div>
+                </div>
+                <div class="lgds-v7x-radius-item">
+                    <div class="lgds-v7x-radius-box" style="border-radius: var(--lgds-v7x-radius-md);"></div>
+                    <div class="lgds-v7x-radius-name">MD</div>
+                    <div class="lgds-v7x-radius-value">14px</div>
+                </div>
+                <div class="lgds-v7x-radius-item">
+                    <div class="lgds-v7x-radius-box" style="border-radius: var(--lgds-v7x-radius-lg);"></div>
+                    <div class="lgds-v7x-radius-name">LG</div>
+                    <div class="lgds-v7x-radius-value">20px</div>
+                </div>
+                <div class="lgds-v7x-radius-item">
+                    <div class="lgds-v7x-radius-box" style="border-radius: var(--lgds-v7x-radius-xl);"></div>
+                    <div class="lgds-v7x-radius-name">XL</div>
+                    <div class="lgds-v7x-radius-value">28px</div>
+                </div>
+            </div>
+
+            <!-- Spacing -->
+            <h3 class="lgds-v7x-type-h3 lgds-v7x-mb-16">Spacing Scale</h3>
+            <div style="max-width: 400px;">
+                <div class="lgds-v7x-spacing-row">
+                    <span class="lgds-v7x-spacing-label">4px</span>
+                    <div class="lgds-v7x-spacing-bar" style="width: 4px;"></div>
+                </div>
+                <div class="lgds-v7x-spacing-row">
+                    <span class="lgds-v7x-spacing-label">8px</span>
+                    <div class="lgds-v7x-spacing-bar" style="width: 32px;"></div>
+                </div>
+                <div class="lgds-v7x-spacing-row">
+                    <span class="lgds-v7x-spacing-label">12px</span>
+                    <div class="lgds-v7x-spacing-bar" style="width: 48px;"></div>
+                </div>
+                <div class="lgds-v7x-spacing-row">
+                    <span class="lgds-v7x-spacing-label">16px</span>
+                    <div class="lgds-v7x-spacing-bar" style="width: 64px;"></div>
+                </div>
+                <div class="lgds-v7x-spacing-row">
+                    <span class="lgds-v7x-spacing-label">24px</span>
+                    <div class="lgds-v7x-spacing-bar" style="width: 96px;"></div>
+                </div>
+                <div class="lgds-v7x-spacing-row">
+                    <span class="lgds-v7x-spacing-label">32px</span>
+                    <div class="lgds-v7x-spacing-bar" style="width: 128px;"></div>
+                </div>
+                <div class="lgds-v7x-spacing-row">
+                    <span class="lgds-v7x-spacing-label">48px</span>
+                    <div class="lgds-v7x-spacing-bar" style="width: 192px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: TYPOGRAPHY
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-3">
+            <h2 class="lgds-v7x-section-title">Typography</h2>
+            <div class="lgds-v7x-glass-card" style="max-width: 600px;">
+                <div style="position: relative; z-index: 1;">
+                    <p class="lgds-v7x-type-display lgds-v7x-mb-16">Display</p>
+                    <p class="lgds-v7x-type-h1 lgds-v7x-mb-16">Heading 1</p>
+                    <p class="lgds-v7x-type-h2 lgds-v7x-mb-16">Heading 2</p>
+                    <p class="lgds-v7x-type-h3 lgds-v7x-mb-16">Heading 3</p>
+                    <p class="lgds-v7x-type-body lgds-v7x-mb-16">Body text — The quick brown fox jumps over the lazy dog. Glass stabilization ensures readability across complex backgrounds.</p>
+                    <p class="lgds-v7x-type-caption lgds-v7x-mb-16">Caption — Metadata, timestamps, helper text</p>
+                    <p class="lgds-v7x-type-mono">Monospace — Code references, data values</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: GLASS CARD COMPONENT
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-3">
+            <h2 class="lgds-v7x-section-title">Glass Card — Core Component</h2>
+            <p class="lgds-v7x-section-desc">The foundational surface. Outer glass shell with highlight band, inner stroke, stabilized plate for content, and elevation shadow.</p>
+
+            <div class="lgds-v7x-grid-3 lgds-v7x-mb-24">
+                <!-- Product Card -->
+                <div class="lgds-v7x-glass-card">
+                    <div class="lgds-v7x-product-card-header">
+                        <div class="lgds-v7x-product-card-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <span class="lgds-v7x-product-card-name">Glass Card</span>
+                    </div>
+                    <p class="lgds-v7x-type-price lgds-v7x-mb-16 lgds-v7x-z1">$99.99</p>
+                    <div class="lgds-v7x-input-row">
+                        <input type="text" class="lgds-v7x-input" placeholder="Enter value...">
+                        <button class="lgds-v7x-btn lgds-v7x-btn--glass">Save</button>
+                    </div>
+                </div>
+
+                <!-- Account Balance Card -->
+                <div class="lgds-v7x-glass-card">
+                    <div class="lgds-v7x-product-card-header">
+                        <div class="lgds-v7x-product-card-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4v4l3 3"/></svg>
+                        </div>
+                        <span class="lgds-v7x-product-card-name">Account Balance</span>
+                    </div>
+                    <p class="lgds-v7x-balance-label">Available Balance</p>
+                    <p class="lgds-v7x-balance-amount">$1,250.00</p>
+                    <div class="lgds-v7x-input-row">
+                        <input type="text" class="lgds-v7x-input" placeholder="Enter amount">
+                        <button class="lgds-v7x-btn lgds-v7x-btn--filled-dark">Transfer</button>
+                    </div>
+                </div>
+
+                <!-- Liquid Card -->
+                <div class="lgds-v7x-glass-card">
+                    <div class="lgds-v7x-product-card-header">
+                        <div class="lgds-v7x-product-card-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                        </div>
+                        <div>
+                            <span class="lgds-v7x-product-card-name">Liquid Card</span>
+                            <div class="lgds-v7x-flex lgds-v7x-gap-4" style="margin-top: 2px;">
+                                <span class="lgds-v7x-type-caption">Status: Active</span>
+                                <span class="lgds-v7x-status-dot lgds-v7x-status-dot--green"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lgds-v7x-stabilized-plate lgds-v7x-mb-16" style="min-height: 80px; display: flex; align-items: center; justify-content: center;">
+                        <span class="lgds-v7x-type-caption">Content sits here</span>
+                    </div>
+                    <div class="lgds-v7x-input-row">
+                        <input type="text" class="lgds-v7x-input" placeholder="Enter value...">
+                        <button class="lgds-v7x-btn lgds-v7x-btn--glass">Update</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lgds-v7x-chip-row">
+                <span class="lgds-v7x-chip">
+                    <svg class="lgds-v7x-icon-16" viewBox="0 0 24 24" style="stroke: var(--lgds-v7x-accent-blue);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    edge + highlight
+                </span>
+                <span class="lgds-v7x-chip">stabilized plate</span>
+                <span class="lgds-v7x-chip">
+                    <svg class="lgds-v7x-icon-16" viewBox="0 0 24 24" style="stroke: var(--lgds-v7x-text-secondary);"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    readable states
+                </span>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: BUTTONS
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-4">
+            <h2 class="lgds-v7x-section-title">Buttons</h2>
+
+            <div class="lgds-v7x-glass-card lgds-v7x-mb-24" style="max-width: 700px;">
+                <div style="position: relative; z-index: 1;">
+                    <h3 class="lgds-v7x-type-h3 lgds-v7x-mb-16">Variants</h3>
+                    <div class="lgds-v7x-flex lgds-v7x-flex--wrap lgds-v7x-gap-12 lgds-v7x-mb-24">
+                        <button class="lgds-v7x-btn lgds-v7x-btn--glass">Glass</button>
+                        <button class="lgds-v7x-btn lgds-v7x-btn--filled-dark">Filled Dark</button>
+                        <button class="lgds-v7x-btn lgds-v7x-btn--accent">Accent</button>
+                        <button class="lgds-v7x-btn lgds-v7x-btn--ghost">Ghost</button>
+                    </div>
+
+                    <h3 class="lgds-v7x-type-h3 lgds-v7x-mb-16">Sizes</h3>
+                    <div class="lgds-v7x-flex lgds-v7x-flex--wrap lgds-v7x-gap-12" style="align-items: center;">
+                        <button class="lgds-v7x-btn lgds-v7x-btn--glass lgds-v7x-btn--sm">Small</button>
+                        <button class="lgds-v7x-btn lgds-v7x-btn--glass">Default</button>
+                        <button class="lgds-v7x-btn lgds-v7x-btn--glass lgds-v7x-btn--lg">Large</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: INPUTS & FORMS
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-4">
+            <h2 class="lgds-v7x-section-title">Inputs & Forms</h2>
+
+            <div class="lgds-v7x-grid-2">
+                <!-- Form overlay demo -->
+                <div class="lgds-v7x-showcase-area">
+                    <div class="lgds-v7x-showcase-blob" style="width: 200px; height: 200px; background: rgba(180, 200, 230, 0.4); top: 10%; left: 5%;"></div>
+                    <div class="lgds-v7x-showcase-blob" style="width: 150px; height: 150px; background: rgba(200, 210, 240, 0.3); bottom: 5%; right: 10%;"></div>
+                    <span class="lgds-v7x-showcase-area-label">overlay</span>
+
+                    <div class="lgds-v7x-glass-card lgds-v7x-form-demo">
+                        <div style="position: relative; z-index: 1;">
+                            <div class="lgds-v7x-input-group lgds-v7x-mb-16">
+                                <label class="lgds-v7x-input-label">Email</label>
+                                <input type="email" class="lgds-v7x-input" placeholder="Email Address">
+                            </div>
+                            <button class="lgds-v7x-btn lgds-v7x-btn--filled-dark lgds-v7x-btn--full lgds-v7x-mb-16">Submit</button>
+                            <div style="text-align: center;">
+                                <div class="lgds-v7x-helper-pill">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                                    Helper text
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input states -->
+                <div class="lgds-v7x-glass-card">
+                    <div style="position: relative; z-index: 1;">
+                        <h3 class="lgds-v7x-type-h3 lgds-v7x-mb-16">Input States</h3>
+
+                        <div class="lgds-v7x-input-group lgds-v7x-mb-16">
+                            <label class="lgds-v7x-input-label">Default</label>
+                            <input type="text" class="lgds-v7x-input" placeholder="Placeholder text">
+                        </div>
+
+                        <div class="lgds-v7x-input-group lgds-v7x-mb-16">
+                            <label class="lgds-v7x-input-label">With Value</label>
+                            <input type="text" class="lgds-v7x-input" value="Entered value">
+                        </div>
+
+                        <div class="lgds-v7x-input-group lgds-v7x-mb-16">
+                            <label class="lgds-v7x-input-label">Project ID</label>
+                            <input type="text" class="lgds-v7x-input" value="P-12345">
+                            <span class="lgds-v7x-input-helper">Enter unique project identifier.</span>
+                        </div>
+
+                        <div class="lgds-v7x-input-group">
+                            <label class="lgds-v7x-input-label">Notes</label>
+                            <input type="text" class="lgds-v7x-input" value="Urgent review required">
+                            <span class="lgds-v7x-input-helper">Add relevant notes here.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: NAVIGATION
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-4">
+            <h2 class="lgds-v7x-section-title">Navigation</h2>
+
+            <div class="lgds-v7x-grid-2">
+                <!-- Navbar -->
+                <div class="lgds-v7x-showcase-area">
+                    <span class="lgds-v7x-showcase-area-label">nav</span>
+                    <nav class="lgds-v7x-navbar">
+                        <div class="lgds-v7x-navbar-logo">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                        </div>
+                        <a class="lgds-v7x-navbar-link lgds-v7x-navbar-link--active">Home</a>
+                        <a class="lgds-v7x-navbar-link">Menu</a>
+                        <a class="lgds-v7x-navbar-link">Links</a>
+                        <div class="lgds-v7x-navbar-avatar"></div>
+                    </nav>
+                </div>
+
+                <!-- Nav with dropdown + search -->
+                <div class="lgds-v7x-showcase-area">
+                    <span class="lgds-v7x-showcase-area-label">nav + dropdown</span>
+                    <div style="position: relative; z-index: 1;">
+                        <nav class="lgds-v7x-navbar lgds-v7x-mb-16">
+                            <a class="lgds-v7x-navbar-link lgds-v7x-navbar-link--active">
+                                <svg class="lgds-v7x-icon-16" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 4px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                                Home
+                            </a>
+                            <a class="lgds-v7x-navbar-link">
+                                <svg class="lgds-v7x-icon-16" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 4px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                Search
+                            </a>
+                            <div class="lgds-v7x-search-input" style="margin-left: auto;">
+                                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                <input type="text" placeholder="Search...">
+                            </div>
+                            <a class="lgds-v7x-navbar-link">
+                                <svg class="lgds-v7x-icon-16" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 4px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                Profile
+                            </a>
+                        </nav>
+                        <div class="lgds-v7x-dropdown" style="margin-left: auto; width: fit-content;">
+                            <div class="lgds-v7x-dropdown-item">
+                                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                                Home
+                            </div>
+                            <div class="lgds-v7x-dropdown-item">
+                                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                Search
+                            </div>
+                            <div class="lgds-v7x-dropdown-item">
+                                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                Profile
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: MODAL, TOAST, TOOLTIP
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-5">
+            <h2 class="lgds-v7x-section-title">Modal · Toast · Tooltip</h2>
+
+            <div class="lgds-v7x-grid-3">
+                <!-- Modal -->
+                <div class="lgds-v7x-showcase-area" style="min-height: 260px;">
+                    <span class="lgds-v7x-showcase-area-label">modal</span>
+                    <div class="lgds-v7x-glass-card" style="max-width: 280px;">
+                        <div style="position: relative; z-index: 1;">
+                            <div class="lgds-v7x-modal-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <h3 class="lgds-v7x-modal-title">Confirm Action</h3>
+                            <p class="lgds-v7x-modal-desc">Make sure you are sure that you want to proceed with this action.</p>
+                            <div class="lgds-v7x-modal-actions">
+                                <button class="lgds-v7x-btn lgds-v7x-btn--ghost">Cancel</button>
+                                <button class="lgds-v7x-btn lgds-v7x-btn--filled-dark">Transfer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tooltip -->
+                <div class="lgds-v7x-showcase-area" style="min-height: 260px;">
+                    <span class="lgds-v7x-showcase-area-label">tooltip</span>
+                    <div class="lgds-v7x-tooltip-wrap">
+                        <div class="lgds-v7x-tooltip-trigger">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="lgds-v7x-tooltip-bubble">
+                            <div class="lgds-v7x-tooltip-bubble-title">Tooltip</div>
+                            <div class="lgds-v7x-tooltip-bubble-text">This is a tooltip explanation that provides context about any component or action.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toast -->
+                <div class="lgds-v7x-showcase-area" style="min-height: 260px; flex-direction: column; gap: 12px;">
+                    <span class="lgds-v7x-showcase-area-label">toast</span>
+
+                    <div class="lgds-v7x-glass-card lgds-v7x-glass-card--compact" style="width: 280px;">
+                        <div class="lgds-v7x-toast">
+                            <div class="lgds-v7x-toast-icon lgds-v7x-toast-icon--success">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <div class="lgds-v7x-toast-content">
+                                <div class="lgds-v7x-toast-title">Success</div>
+                                <div class="lgds-v7x-toast-msg">Your action has been completed.</div>
+                            </div>
+                            <button class="lgds-v7x-toast-close">×</button>
+                        </div>
+                    </div>
+
+                    <div class="lgds-v7x-glass-card lgds-v7x-glass-card--compact" style="width: 280px;">
+                        <div class="lgds-v7x-toast">
+                            <div class="lgds-v7x-toast-icon lgds-v7x-toast-icon--error">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                            </div>
+                            <div class="lgds-v7x-toast-content">
+                                <div class="lgds-v7x-toast-title">Error</div>
+                                <div class="lgds-v7x-toast-msg">Something went wrong.</div>
+                            </div>
+                            <button class="lgds-v7x-toast-close">×</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: DATA TABLE (Density Stress Test)
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-5">
+            <h2 class="lgds-v7x-section-title">Data Table — Density Stress Test</h2>
+            <p class="lgds-v7x-section-desc">Glass stabilization ensures rows scan cleanly and microcopy survives. The stabilized plate provides a solid reading surface inside the glass shell.</p>
+
+            <div class="lgds-v7x-glass-card lgds-v7x-glass-card--elevated lgds-v7x-mb-24">
+                <div style="position: relative; z-index: 1;">
+                    <!-- Toolbar -->
+                    <div class="lgds-v7x-flex lgds-v7x-gap-12 lgds-v7x-mb-16" style="align-items: center; flex-wrap: wrap;">
+                        <div class="lgds-v7x-search-input">
+                            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" placeholder="Search...">
+                        </div>
+                        <div class="lgds-v7x-tab-bar" style="margin-left: auto;">
+                            <button class="lgds-v7x-tab-item lgds-v7x-tab-item--active">Overview</button>
+                            <button class="lgds-v7x-tab-item">Details</button>
+                            <button class="lgds-v7x-tab-item">Analytics</button>
+                            <button class="lgds-v7x-btn lgds-v7x-btn--accent lgds-v7x-btn--sm">Export</button>
+                        </div>
+                    </div>
+
+                    <div class="lgds-v7x-flex lgds-v7x-gap-24" style="flex-wrap: wrap;">
+                        <!-- Table -->
+                        <div class="lgds-v7x-stabilized-plate" style="flex: 2; min-width: 320px;">
+                            <div class="lgds-v7x-table-container">
+                                <table class="lgds-v7x-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Status</th>
+                                            <th>Owner</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Acme Corp.</td>
+                                            <td><span class="lgds-v7x-status-badge lgds-v7x-status-badge--active"><span class="lgds-v7x-status-dot lgds-v7x-status-dot--green"></span>Active</span></td>
+                                            <td>J. Smith</td>
+                                            <td>4500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Beta Inc.</td>
+                                            <td><span class="lgds-v7x-status-badge lgds-v7x-status-badge--pending"><span class="lgds-v7x-status-dot lgds-v7x-status-dot--orange"></span>Pending</span></td>
+                                            <td>M. Lee</td>
+                                            <td>2100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gamma Ltd.</td>
+                                            <td><span class="lgds-v7x-status-badge lgds-v7x-status-badge--inactive"><span class="lgds-v7x-status-dot lgds-v7x-status-dot--gray"></span>Inactive</span></td>
+                                            <td>K. Chen</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Delta Co.</td>
+                                            <td><span class="lgds-v7x-status-badge lgds-v7x-status-badge--active"><span class="lgds-v7x-status-dot lgds-v7x-status-dot--green"></span>Active</span></td>
+                                            <td>R. Patel</td>
+                                            <td>3200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Epsilon LLC</td>
+                                            <td><span class="lgds-v7x-status-badge lgds-v7x-status-badge--pending"><span class="lgds-v7x-status-dot lgds-v7x-status-dot--orange"></span>Pending</span></td>
+                                            <td>S. Kim</td>
+                                            <td>1800</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Side panel -->
+                        <div class="lgds-v7x-stabilized-plate" style="flex: 1; min-width: 200px;">
+                            <div class="lgds-v7x-input-group lgds-v7x-mb-16">
+                                <label class="lgds-v7x-input-label">Project ID</label>
+                                <input type="text" class="lgds-v7x-input" value="P-12345">
+                                <span class="lgds-v7x-input-helper" style="color: var(--lgds-v7x-accent-blue);">Enter unique project identifier.</span>
+                            </div>
+                            <div class="lgds-v7x-input-group">
+                                <label class="lgds-v7x-input-label">Notes</label>
+                                <input type="text" class="lgds-v7x-input" value="Urgent review required">
+                                <span class="lgds-v7x-input-helper">Add relevant notes here.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lgds-v7x-chip-row">
+                <span class="lgds-v7x-chip">rows must scan</span>
+                <span class="lgds-v7x-chip">microcopy survives</span>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: DATA DENSE SETTINGS LIST
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-5">
+            <h2 class="lgds-v7x-section-title">Data Dense — Settings Pattern</h2>
+
+            <div class="lgds-v7x-grid-2">
+                <div class="lgds-v7x-showcase-area">
+                    <div class="lgds-v7x-showcase-blob" style="width: 250px; height: 250px; background: rgba(190, 205, 230, 0.4); bottom: -15%; left: -10%;"></div>
+                    <span class="lgds-v7x-showcase-area-label">data dense</span>
+                    <div class="lgds-v7x-glass-card" style="width: 300px;">
+                        <div class="lgds-v7x-data-list">
+                            <div class="lgds-v7x-data-list-header">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                                <span class="lgds-v7x-data-list-title">High Density Zone</span>
+                            </div>
+                            <div class="lgds-v7x-data-row">
+                                <div class="lgds-v7x-data-row-icon">
+                                    <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                                </div>
+                                <span class="lgds-v7x-data-row-label">Storage</span>
+                                <span class="lgds-v7x-data-row-val">128GB</span>
+                                <span class="lgds-v7x-data-row-secondary">200</span>
+                                <svg class="lgds-v7x-data-row-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                            </div>
+                            <div class="lgds-v7x-data-row">
+                                <div class="lgds-v7x-data-row-icon">
+                                    <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="10" y1="6" x2="14" y2="6"/></svg>
+                                </div>
+                                <span class="lgds-v7x-data-row-label">Battery</span>
+                                <span class="lgds-v7x-data-row-val">85%</span>
+                                <span class="lgds-v7x-data-row-secondary">50</span>
+                                <svg class="lgds-v7x-data-row-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                            </div>
+                            <div class="lgds-v7x-data-row">
+                                <div class="lgds-v7x-data-row-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                                </div>
+                                <span class="lgds-v7x-data-row-label">Network</span>
+                                <span class="lgds-v7x-data-row-val">5G</span>
+                                <span class="lgds-v7x-data-row-secondary">126</span>
+                                <svg class="lgds-v7x-data-row-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                            </div>
+                            <div class="lgds-v7x-data-row">
+                                <div class="lgds-v7x-data-row-icon">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                                </div>
+                                <span class="lgds-v7x-data-row-label">Settings</span>
+                                <span class="lgds-v7x-data-row-val">General</span>
+                                <svg class="lgds-v7x-data-row-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                            </div>
+
+                            <div class="lgds-v7x-divider"></div>
+                            <div class="lgds-v7x-flex lgds-v7x-gap-8" style="align-items: center;">
+                                <svg class="lgds-v7x-icon-16" viewBox="0 0 24 24" style="stroke: var(--lgds-v7x-accent-orange);"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                <span class="lgds-v7x-type-caption">High Density Zone</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Long copy -->
+                <div class="lgds-v7x-showcase-area">
+                    <div class="lgds-v7x-showcase-blob" style="width: 200px; height: 200px; background: rgba(195, 205, 225, 0.4); top: 5%; right: 5%;"></div>
+                    <span class="lgds-v7x-showcase-area-label">long copy</span>
+                    <div class="lgds-v7x-glass-card lgds-v7x-longcopy-card">
+                        <div class="lgds-v7x-stabilized-plate">
+                            <h3 class="lgds-v7x-longcopy-title">Terms of Service</h3>
+                            <p class="lgds-v7x-longcopy-body">
+                                These terms govern your use of our services. Please read carefully.<br><br>
+                                Use of this service constitutes acceptance of these terms. The service provides comprehensive tools designed to help you manage your workflow efficiently and effectively across multiple platforms and devices.
+                            </p>
+                            <div class="lgds-v7x-longcopy-warning">
+                                Warning: <span>Carefully review before proceeding. Glass stabilization required for readability.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lgds-v7x-chip-row lgds-v7x-mt-16">
+                <span class="lgds-v7x-chip">overlay zones</span>
+                <span class="lgds-v7x-chip">density zones</span>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: BACKGROUND STRESS BOARD
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-5">
+            <h2 class="lgds-v7x-section-title">Background Stress Board</h2>
+            <p class="lgds-v7x-section-desc">Same component, different backgrounds. Content must stay stable and readable regardless of what's behind the glass.</p>
+
+            <div class="lgds-v7x-stress-grid">
+                <!-- Calm -->
+                <div class="lgds-v7x-stress-cell lgds-v7x-stress-bg-calm">
+                    <span class="lgds-v7x-stress-cell-label">calm</span>
+                    <div class="lgds-v7x-glass-card" style="max-width: 240px;">
+                        <div class="lgds-v7x-product-card-header">
+                            <div class="lgds-v7x-product-card-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <span class="lgds-v7x-product-card-name">Glass Card</span>
+                        </div>
+                        <p class="lgds-v7x-type-price lgds-v7x-mb-8 lgds-v7x-z1">$99.99</p>
+                        <div class="lgds-v7x-input-row">
+                            <input type="text" class="lgds-v7x-input" placeholder="" style="max-width: 100px;">
+                            <button class="lgds-v7x-btn lgds-v7x-btn--glass lgds-v7x-btn--sm">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Texture -->
+                <div class="lgds-v7x-stress-cell lgds-v7x-stress-bg-texture">
+                    <span class="lgds-v7x-stress-cell-label">texture</span>
+                    <div class="lgds-v7x-glass-card" style="max-width: 240px;">
+                        <div class="lgds-v7x-product-card-header">
+                            <div class="lgds-v7x-product-card-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <span class="lgds-v7x-product-card-name">Glass Card</span>
+                        </div>
+                        <p class="lgds-v7x-type-price lgds-v7x-mb-8 lgds-v7x-z1">$99.99</p>
+                        <div class="lgds-v7x-input-row">
+                            <input type="text" class="lgds-v7x-input" placeholder="" style="max-width: 100px;">
+                            <button class="lgds-v7x-btn lgds-v7x-btn--glass lgds-v7x-btn--sm">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotspot -->
+                <div class="lgds-v7x-stress-cell lgds-v7x-stress-bg-hotspot">
+                    <span class="lgds-v7x-stress-cell-label">hotspot</span>
+                    <div class="lgds-v7x-glass-card" style="max-width: 240px;">
+                        <div class="lgds-v7x-product-card-header">
+                            <div class="lgds-v7x-product-card-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <span class="lgds-v7x-product-card-name">Glass Card</span>
+                        </div>
+                        <p class="lgds-v7x-type-price lgds-v7x-mb-8 lgds-v7x-z1">$99.99</p>
+                        <div class="lgds-v7x-input-row">
+                            <input type="text" class="lgds-v7x-input" placeholder="" style="max-width: 100px;">
+                            <button class="lgds-v7x-btn lgds-v7x-btn--glass lgds-v7x-btn--sm">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shape -->
+                <div class="lgds-v7x-stress-cell lgds-v7x-stress-bg-shape">
+                    <span class="lgds-v7x-stress-cell-label" style="z-index: 3;">shape</span>
+                    <div class="lgds-v7x-glass-card" style="max-width: 240px; z-index: 2;">
+                        <div class="lgds-v7x-product-card-header">
+                            <div class="lgds-v7x-product-card-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <span class="lgds-v7x-product-card-name">Glass Card</span>
+                        </div>
+                        <p class="lgds-v7x-type-price lgds-v7x-mb-8 lgds-v7x-z1">$99.99</p>
+                        <div class="lgds-v7x-input-row">
+                            <input type="text" class="lgds-v7x-input" placeholder="" style="max-width: 100px;">
+                            <button class="lgds-v7x-btn lgds-v7x-btn--glass lgds-v7x-btn--sm">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Complex -->
+                <div class="lgds-v7x-stress-cell lgds-v7x-stress-bg-complex">
+                    <span class="lgds-v7x-stress-cell-label">complex</span>
+                    <div class="lgds-v7x-glass-card" style="max-width: 240px;">
+                        <div class="lgds-v7x-product-card-header">
+                            <div class="lgds-v7x-product-card-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <span class="lgds-v7x-product-card-name">Glass Card</span>
+                        </div>
+                        <p class="lgds-v7x-type-price lgds-v7x-mb-8 lgds-v7x-z1">$99.99</p>
+                        <div class="lgds-v7x-input-row">
+                            <input type="text" class="lgds-v7x-input" placeholder="" style="max-width: 100px;">
+                            <button class="lgds-v7x-btn lgds-v7x-btn--glass lgds-v7x-btn--sm">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dark -->
+                <div class="lgds-v7x-stress-cell lgds-v7x-stress-bg-dark">
+                    <span class="lgds-v7x-stress-cell-label">dark</span>
+                    <div class="lgds-v7x-glass-card" style="max-width: 240px; --lgds-v7x-glass-bg: rgba(255,255,255,0.06); --lgds-v7x-glass-border: rgba(255,255,255,0.12); --lgds-v7x-glass-border-inner: rgba(255,255,255,0.08); --lgds-v7x-glass-highlight: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.0) 100%); --lgds-v7x-text-primary: #f0f0f8; --lgds-v7x-text-secondary: #a0a0b8; --lgds-v7x-input-bg: rgba(255,255,255,0.06); --lgds-v7x-input-border: rgba(255,255,255,0.1);">
+                        <div class="lgds-v7x-product-card-header">
+                            <div class="lgds-v7x-product-card-icon" style="border-color: rgba(255,255,255,0.12); background: rgba(255,255,255,0.06);">
+                                <svg viewBox="0 0 24 24" style="stroke: #a0a0b8;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <span class="lgds-v7x-product-card-name" style="color: #f0f0f8;">Glass Card</span>
+                        </div>
+                        <p class="lgds-v7x-type-price lgds-v7x-mb-8 lgds-v7x-z1" style="color: #f0f0f8;">$99.99</p>
+                        <div class="lgds-v7x-input-row">
+                            <input type="text" class="lgds-v7x-input" placeholder="" style="max-width: 100px; color: #f0f0f8;">
+                            <button class="lgds-v7x-btn lgds-v7x-btn--glass lgds-v7x-btn--sm" style="color: #f0f0f8;">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lgds-v7x-chip-row lgds-v7x-mt-16">
+                <span class="lgds-v7x-chip">same component</span>
+                <span class="lgds-v7x-chip">different background</span>
+                <span class="lgds-v7x-chip" style="margin-left: auto;">content must stay stable</span>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: CSS TOKEN REFERENCE
+             ============================================ -->
+        <section class="lgds-v7x-section lgds-v7x-animate-in lgds-v7x-animate-delay-5">
+            <h2 class="lgds-v7x-section-title">CSS Token Reference</h2>
+
+            <div class="lgds-v7x-glass-card" style="max-width: 700px;">
+                <div class="lgds-v7x-z1">
+<pre class="lgds-v7x-code-block"><span class="lgds-v7x-code-key">/* Glass Surface */</span>
+<span class="lgds-v7x-code-key">background:</span>    <span class="lgds-v7x-code-val">rgba(255, 255, 255, 0.35)</span>
+<span class="lgds-v7x-code-key">backdrop-filter:</span> <span class="lgds-v7x-code-val">blur(20px)</span>
+<span class="lgds-v7x-code-key">border:</span>        <span class="lgds-v7x-code-val">1px solid rgba(255, 255, 255, 0.6)</span>
+<span class="lgds-v7x-code-key">inner-stroke:</span>  <span class="lgds-v7x-code-val">1px solid rgba(255, 255, 255, 0.4)</span>
+
+<span class="lgds-v7x-code-key">/* Highlight Band */</span>
+<span class="lgds-v7x-code-key">background:</span>    <span class="lgds-v7x-code-val">linear-gradient(135deg, rgba(255,255,255,0.5) → 0)</span>
+
+<span class="lgds-v7x-code-key">/* Stabilized Plate */</span>
+<span class="lgds-v7x-code-key">background:</span>    <span class="lgds-v7x-code-val">rgba(255, 255, 255, 0.7)</span>
+<span class="lgds-v7x-code-key">border:</span>        <span class="lgds-v7x-code-val">1px solid rgba(255, 255, 255, 0.8)</span>
+
+<span class="lgds-v7x-code-key">/* Elevation Shadow */</span>
+<span class="lgds-v7x-code-key">box-shadow:</span>    <span class="lgds-v7x-code-val">0 8px 32px rgba(0,0,0,0.06),</span>
+               <span class="lgds-v7x-code-val">0 2px 8px rgba(0,0,0,0.04)</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECTION: MICRO CHIP ROW (footer)
+             ============================================ -->
+        <div class="lgds-v7x-flex lgds-v7x-flex--center lgds-v7x-gap-12 lgds-v7x-mt-24" style="flex-wrap: wrap;">
+            <span class="lgds-v7x-type-caption" style="margin-right: 8px;">micro chip row</span>
+            <span class="lgds-v7x-chip">stack model</span>
+            <span class="lgds-v7x-chip">shippable rules</span>
+            <span class="lgds-v7x-chip">edge + highlight</span>
+            <span class="lgds-v7x-chip">stabilized plate</span>
+            <span class="lgds-v7x-chip">readable states</span>
+        </div>
+
+    </div>
+
+    <script>
+        (function() {
+            const toggleEl = document.getElementById('lgds-v7x-theme-toggle');
+            const bodyEl = document.body;
+
+            // Check for saved preference
+            const savedTheme = localStorage.getItem('lgds-v7x-theme');
+            if (savedTheme === 'dark') {
+                bodyEl.setAttribute('data-lgds-v7x-theme', 'dark');
             }
 
-            toggle.addEventListener('click', function() {
-                isDark = !isDark;
-                applyTheme();
+            toggleEl.addEventListener('click', function() {
+                const current = bodyEl.getAttribute('data-lgds-v7x-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                bodyEl.setAttribute('data-lgds-v7x-theme', next);
+                localStorage.setItem('lgds-v7x-theme', next);
             });
 
-            function applyTheme() {
-                if (isDark) {
-                    document.documentElement.setAttribute('data-lgds-v7x-theme', 'dark');
-                    icon.textContent = '🌙';
-                    label.textContent = 'Dark';
-                } else {
-                    document.documentElement.removeAttribute('data-lgds-v7x-theme');
-                    icon.textContent = '☀️';
-                    label.textContent = 'Light';
+            toggleEl.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleEl.click();
                 }
-            }
+            });
 
-            // Toggle demos
-            const t1 = document.getElementById('lgds-v7x-toggle-demo1');
-            const t2 = document.getElementById('lgds-v7x-toggle-demo2');
+            // Animate elements on scroll
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '';
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
 
-            if (t1) {
-                t1.addEventListener('click', function() {
-                    this.classList.toggle('lgds-v7x-toggle--on');
-                });
-            }
-            if (t2) {
-                t2.addEventListener('click', function() {
-                    this.classList.toggle('lgds-v7x-toggle--on');
-                });
-            }
+            document.querySelectorAll('.lgds-v7x-animate-in').forEach(function(el) {
+                observer.observe(el);
+            });
         })();
-    </script></body></html>
+    </script>
+</body>
+</html>
